@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "filename": "cell_test_bench.kicad_pro",
+    "version": 1
+  },
+  "schematic": {
+    "legacy_lib_dir": "",
+    "legacy_lib_list": []
+  },
+  "sheets": [
+    [
+      "51e1b09d-dc77-4c14-84f5-736a731e6da4",
+      "Root"
+    ],
+    [
+      "51455a0a-faf5-4dae-8d11-fae4b6c66ee1",
+      "Power"
+    ],
+    [
+      "9f9b0538-a12f-4472-8f7a-9e6c5d8b94a1",
+      "Cell_Relays"
+    ],
+    [
+      "1507153d-ec72-4d18-8824-b20fec4b2229",
+      "Electronic_Load"
+    ],
+    [
+      "c0996e42-3bd0-48dd-afe0-a0045aa8eee4",
+      "Charger"
+    ],
+    [
+      "b4efa444-d319-4115-b599-33d18b1ea55a",
+      "Measurement"
+    ],
+    [
+      "f2d290d2-4449-4368-91f0-16ffa1071881",
+      "Protection"
+    ],
+    [
+      "67562d6f-1f89-4d9f-aba5-2cf798a3a18d",
+      "Thermal"
+    ],
+    [
+      "0281012e-8afd-4ce6-b078-192bd8fd03d9",
+      "MCU"
+    ]
+  ],
+  "boards": [],
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  },
+  "text_variables": {}
+}
