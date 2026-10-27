@@ -1,17 +1,14 @@
+"""Compare KiCad's exported netlist (chk/net.net) with the intended connections in design.py."""
 import sys, design
 from sexp import parse, find
-D = design.build('out')
-# intended
 want = {}
-for k in design.ORDER:
-    for pt in design.SHEETS[k]['parts']:
-        ref = pt['ref']
-        if ref.startswith('#'): continue
-        r = ref[0] + str(design.PREFIX[k]) + '%02d' % int(''.join(c for c in ref if c.isdigit()))
-        if ref[0] == 'K': r = ref
-        for pin, n in pt['nets'].items():
-            want[(r, pin)] = n
-net = parse(open('chk/net.net').read())[0]
+fps = {}
+for k, r, pt in design.all_parts():
+    if r.startswith('#'): continue
+    fps[r] = design.lib_fp(pt['fp'])
+    for pin, n in pt['nets'].items():
+        want[(r, pin)] = n
+net = parse(open(sys.argv[1] if len(sys.argv) > 1 else 'chk/net.net').read())[0]
 got = {}
 for n in find(find(net, 'nets')[0], 'net'):
     name = find(n, 'name')[0][1]
@@ -22,16 +19,17 @@ groups = {}
 for key, n in want.items():
     if key not in got:
         print('missing in netlist', key, n); bad += 1; continue
-    if n == 'NC':
-        continue
+    if n == 'NC': continue
     groups.setdefault(n, set()).add(got[key])
 for n, g in groups.items():
-    if len(g) != 1:
-        print('SPLIT', n, g); bad += 1
+    if len(g) != 1: print('SPLIT', n, g); bad += 1
 inv = {}
 for n, g in groups.items():
     for kn in g: inv.setdefault(kn, set()).add(n)
 for kn, ns in inv.items():
     if len(ns) > 1: print('MERGED', kn, ns); bad += 1
-extra = [k for k in got if k not in want]
-print('pins checked', len(want), 'nets', len(groups), 'problems', bad, 'extra nodes', extra[:5])
+comps = {find(c, 'ref')[0][1]: (find(c, 'footprint')[0][1] if find(c, 'footprint') else '') for c in find(find(net, 'components')[0], 'comp')}
+for r, f in fps.items():
+    if comps.get(r) != f: print('FOOTPRINT', r, comps.get(r), f); bad += 1
+print('pins checked', len(want), 'nets', len(groups), 'parts', len(comps), 'problems', bad)
+sys.exit(1 if bad else 0)

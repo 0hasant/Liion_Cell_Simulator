@@ -1,467 +1,54 @@
 {
-  "board": {
-    "3dviewports": [],
-    "ipc2581": {
-      "bom_rev": "",
-      "dist": "",
-      "distpn": "",
-      "internal_id": "",
-      "mfg": "",
-      "mpn": "",
-      "sch_revision": "0.1 draft"
-    },
-    "layer_pairs": [],
-    "layer_presets": [],
-    "viewports": []
+  "meta": {
+    "filename": "cell_test_bench.kicad_pro",
+    "version": 1
   },
-  "boards": [],
-  "component_class_settings": {
-    "assignments": [],
-    "meta": {
-      "version": 0
-    },
-    "sheet_component_classes": {
-      "enabled": false
-    }
+  "schematic": {
+    "legacy_lib_dir": "",
+    "legacy_lib_list": []
   },
-  "cvpcb": {
-    "equivalence_files": []
-  },
-  "erc": {
-    "erc_exclusions": [],
-    "meta": {
-      "version": 0
-    },
-    "pin_map": [
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
-      [
-        0,
-        2,
-        0,
-        1,
-        0,
-        0,
-        1,
-        0,
-        2,
-        2,
-        2,
-        2
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        1,
-        0,
-        1,
-        2
-      ],
-      [
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        2,
-        1,
-        1,
-        2
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
-      [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
-      [
-        1,
-        1,
-        1,
-        1,
-        1,
-        0,
-        1,
-        1,
-        1,
-        1,
-        1,
-        2
-      ],
-      [
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
-      [
-        0,
-        2,
-        1,
-        2,
-        0,
-        0,
-        1,
-        0,
-        2,
-        2,
-        2,
-        2
-      ],
-      [
-        0,
-        2,
-        0,
-        1,
-        0,
-        0,
-        1,
-        0,
-        2,
-        0,
-        0,
-        2
-      ],
-      [
-        0,
-        2,
-        1,
-        1,
-        0,
-        0,
-        1,
-        0,
-        2,
-        0,
-        0,
-        2
-      ],
-      [
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2
-      ]
+  "sheets": [
+    [
+      "2ca2ea37-9df4-44c4-a178-bea9b66a1bc2",
+      "Root"
     ],
-    "rule_severities": {
-      "bus_definition_conflict": "error",
-      "bus_entry_needed": "error",
-      "bus_to_bus_conflict": "error",
-      "bus_to_net_conflict": "error",
-      "different_unit_footprint": "error",
-      "different_unit_net": "error",
-      "duplicate_reference": "error",
-      "duplicate_sheet_names": "error",
-      "endpoint_off_grid": "warning",
-      "extra_units": "error",
-      "field_name_whitespace": "warning",
-      "footprint_filter": "ignore",
-      "footprint_link_issues": "warning",
-      "four_way_junction": "ignore",
-      "ground_pin_not_ground": "warning",
-      "hier_label_mismatch": "error",
-      "isolated_pin_label": "warning",
-      "label_dangling": "error",
-      "label_multiple_wires": "warning",
-      "lib_symbol_issues": "warning",
-      "lib_symbol_mismatch": "warning",
-      "missing_bidi_pin": "warning",
-      "missing_input_pin": "warning",
-      "missing_power_pin": "error",
-      "missing_unit": "warning",
-      "multiple_net_names": "warning",
-      "net_not_bus_member": "warning",
-      "no_connect_connected": "warning",
-      "no_connect_dangling": "warning",
-      "pin_not_connected": "error",
-      "pin_not_driven": "error",
-      "pin_to_pin": "warning",
-      "power_pin_not_driven": "error",
-      "same_local_global_label": "warning",
-      "similar_label_and_power": "warning",
-      "similar_labels": "warning",
-      "similar_power": "warning",
-      "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
-      "stacked_pin_name": "warning",
-      "unannotated": "error",
-      "unconnected_wire_endpoint": "warning",
-      "undefined_netclass": "error",
-      "unit_value_mismatch": "error",
-      "unresolved_variable": "error",
-      "wire_dangling": "error"
-    }
-  },
+    [
+      "0ec18e91-53bc-43e4-8318-a3c6bffafe30",
+      "Power"
+    ],
+    [
+      "02040192-ced7-4385-89e1-29754c8d0505",
+      "Cell_Relays"
+    ],
+    [
+      "5a9eb632-12d3-4250-9a08-604d11b4e9b5",
+      "Electronic_Load"
+    ],
+    [
+      "105b18fb-350d-4f8a-be5f-578a8e7c8519",
+      "Charger"
+    ],
+    [
+      "5bfb04d1-6928-4864-b5eb-bccb0cc714a9",
+      "Measurement"
+    ],
+    [
+      "50329fb0-d821-4981-9e33-36d36ce6017f",
+      "Protection"
+    ],
+    [
+      "909b9f20-8afe-485a-a5d1-f095b4bf03f2",
+      "Thermal"
+    ],
+    [
+      "bbe492b1-2611-4182-a179-24da0f792ab5",
+      "MCU"
+    ]
+  ],
+  "boards": [],
   "libraries": {
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": []
   },
-  "meta": {
-    "filename": "cell_test_bench.kicad_pro",
-    "version": 3
-  },
-  "net_settings": {
-    "classes": [
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "Default",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2147483647,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      }
-    ],
-    "meta": {
-      "version": 5
-    },
-    "net_colors": null,
-    "netclass_assignments": null,
-    "netclass_patterns": []
-  },
-  "pcbnew": {
-    "last_paths": {
-      "idf": "",
-      "netlist": "",
-      "plot": "",
-      "specctra_dsn": "",
-      "vrml": ""
-    },
-    "page_layout_descr_file": ""
-  },
-  "schematic": {
-    "annotate_start_num": 0,
-    "annotation": {
-      "method": 0,
-      "sort_order": 0
-    },
-    "bom_export_filename": "${PROJECTNAME}.csv",
-    "bom_fmt_presets": [],
-    "bom_fmt_settings": {
-      "field_delimiter": ",",
-      "keep_line_breaks": false,
-      "keep_tabs": false,
-      "name": "CSV",
-      "ref_delimiter": ",",
-      "ref_range_delimiter": "",
-      "string_delimiter": "\""
-    },
-    "bom_presets": [],
-    "bom_settings": {
-      "exclude_dnp": false,
-      "fields_ordered": [
-        {
-          "group_by": false,
-          "label": "Reference",
-          "name": "Reference",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Qty",
-          "name": "${QUANTITY}",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "Value",
-          "name": "Value",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "DNP",
-          "name": "${DNP}",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "Exclude from BOM",
-          "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "Exclude from Board",
-          "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "Footprint",
-          "name": "Footprint",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Datasheet",
-          "name": "Datasheet",
-          "show": true
-        }
-      ],
-      "filter_string": "",
-      "group_symbols": true,
-      "include_excluded_from_bom": true,
-      "name": "Default Editing",
-      "sort_asc": true,
-      "sort_field": "Reference"
-    },
-    "bus_aliases": {},
-    "connection_grid_size": 50.0,
-    "drawing": {
-      "dashed_lines_dash_length_ratio": 12.0,
-      "dashed_lines_gap_length_ratio": 3.0,
-      "default_line_thickness": 6.0,
-      "default_text_size": 50.0,
-      "field_names": [],
-      "hop_over_size_choice": 0,
-      "intersheets_ref_own_page": false,
-      "intersheets_ref_prefix": "",
-      "intersheets_ref_short": false,
-      "intersheets_ref_show": false,
-      "intersheets_ref_suffix": "",
-      "junction_size_choice": 3,
-      "label_size_ratio": 0.375,
-      "operating_point_overlay_i_precision": 3,
-      "operating_point_overlay_i_range": "~A",
-      "operating_point_overlay_v_precision": 3,
-      "operating_point_overlay_v_range": "~V",
-      "overbar_offset_ratio": 1.23,
-      "pin_symbol_size": 25.0,
-      "text_offset_ratio": 0.15
-    },
-    "legacy_lib_dir": "",
-    "legacy_lib_list": [],
-    "meta": {
-      "version": 1
-    },
-    "page_layout_descr_file": "",
-    "plot_directory": "",
-    "reuse_designators": true,
-    "subpart_first_id": 65,
-    "subpart_id_separator": 0,
-    "top_level_sheets": [
-      {
-        "filename": "cell_test_bench.kicad_sch",
-        "name": "cell_test_bench",
-        "uuid": "51e1b09d-dc77-4c14-84f5-736a731e6da4"
-      }
-    ],
-    "used_designators": "",
-    "variants": []
-  },
-  "sheets": [
-    [
-      "51e1b09d-dc77-4c14-84f5-736a731e6da4",
-      "cell_test_bench"
-    ],
-    [
-      "51455a0a-faf5-4dae-8d11-fae4b6c66ee1",
-      "Power"
-    ],
-    [
-      "9f9b0538-a12f-4472-8f7a-9e6c5d8b94a1",
-      "Cell_Relays"
-    ],
-    [
-      "1507153d-ec72-4d18-8824-b20fec4b2229",
-      "Electronic_Load"
-    ],
-    [
-      "c0996e42-3bd0-48dd-afe0-a0045aa8eee4",
-      "Charger"
-    ],
-    [
-      "b4efa444-d319-4115-b599-33d18b1ea55a",
-      "Measurement"
-    ],
-    [
-      "f2d290d2-4449-4368-91f0-16ffa1071881",
-      "Protection"
-    ],
-    [
-      "67562d6f-1f89-4d9f-aba5-2cf798a3a18d",
-      "Thermal"
-    ],
-    [
-      "0281012e-8afd-4ce6-b078-192bd8fd03d9",
-      "MCU"
-    ]
-  ],
-  "text_variables": {},
-  "tuning_profiles": {
-    "meta": {
-      "version": 0
-    },
-    "tuning_profiles_impedance_geometric": []
-  }
+  "text_variables": {}
 }
