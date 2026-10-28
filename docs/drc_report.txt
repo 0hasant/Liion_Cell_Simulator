@@ -1,0 +1,409 @@
+** Drc report for chk/final3.kicad_pcb **
+** Created on 2026-10-28 06:08:19 **
+
+** Found 133 DRC violations **
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(151.8250 mm, 84.1750 mm): Footprint C507
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(105.0350 mm, 90.7550 mm): Footprint Q303
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(95.3050 mm, 15.1450 mm): Footprint R702
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(98.0000 mm, 70.0000 mm): Footprint U302
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(163.8250 mm, 72.1750 mm): Footprint C502
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(6.5000 mm, 14.0000 mm): Footprint J101
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(104.3250 mm, 108.1750 mm): Footprint C305
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(150.3050 mm, 34.1450 mm): Footprint R611
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(57.3050 mm, 63.1450 mm): Footprint R202
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(132.3050 mm, 38.1450 mm): Footprint R614
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(137.8050 mm, 30.1450 mm): Footprint R603
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(88.0350 mm, 64.7550 mm): Footprint Q204
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(142.0350 mm, 21.2550 mm): Footprint Q601
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(157.8050 mm, 80.1450 mm): Footprint R505
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(117.3050 mm, 119.1450 mm): Footprint R313
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(6.0000 mm, 78.0000 mm): Footprint J401
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(115.8050 mm, 103.1450 mm): Footprint R302
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(62.5350 mm, 64.7550 mm): Footprint Q201
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(115.8050 mm, 99.1450 mm): Footprint R301
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(137.0000 mm, 126.0000 mm): Footprint J501
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(126.3050 mm, 37.6450 mm): Footprint R613
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(71.0350 mm, 64.7550 mm): Footprint Q202
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(144.3050 mm, 34.1450 mm): Footprint R610
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(102.3250 mm, 50.1750 mm): Footprint C801
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(118.0000 mm, 127.0000 mm): Footprint Q301
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(131.8250 mm, 25.6750 mm): Footprint C601
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(130.6250 mm, 13.5750 mm): Footprint U602
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(126.3050 mm, 33.6450 mm): Footprint R607
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(104.3050 mm, 112.6450 mm): Footprint R309
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(117.0000 mm, 4.0000 mm): Footprint J705
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(110.8250 mm, 107.1750 mm): Footprint C304
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(4.0000 mm, 4.0000 mm): Footprint H101
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(99.0000 mm, 4.0000 mm): Footprint J704
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(146.0000 mm, 126.0000 mm): Footprint J502
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(138.3050 mm, 38.1450 mm): Footprint R615
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(149.8050 mm, 26.1450 mm): Footprint R602
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(79.8750 mm, 75.1250 mm): Footprint D202
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(117.3050 mm, 111.1450 mm): Footprint R306
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(34.2750 mm, 22.2750 mm): Footprint C101
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(97.8250 mm, 100.1750 mm): Footprint C302
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(66.0000 mm, 100.0000 mm): Footprint K2
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(18.0750 mm, 67.2750 mm): Footprint D401
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(157.8050 mm, 76.1450 mm): Footprint R503
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(79.5350 mm, 64.7550 mm): Footprint Q203
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(119.7250 mm, 88.7250 mm): Footprint U301
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(63.8050 mm, 76.1450 mm): Footprint R203
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(6.0000 mm, 30.0000 mm): Footprint J102
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(96.0350 mm, 90.7550 mm): Footprint Q302
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(55.0000 mm, 6.0000 mm): Footprint J702
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(24.0000 mm, 100.0000 mm): Footprint K1
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(79.8750 mm, 70.1250 mm): Footprint D201
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(92.0000 mm, 123.5000 mm): Footprint J301
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(101.3050 mm, 15.1450 mm): Footprint R703
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(163.8250 mm, 80.1750 mm): Footprint C506
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(108.3050 mm, 50.1450 mm): Footprint R801
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(163.8250 mm, 76.1750 mm): Footprint C504
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(176.0000 mm, 126.0000 mm): Footprint H104
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(101.3750 mm, 45.6250 mm): Footprint D801
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(164.0000 mm, 126.0000 mm): Footprint J504
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(46.0000 mm, 123.5000 mm): Footprint J205
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(87.8050 mm, 79.6450 mm): Footprint R207
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(158.0000 mm, 12.0000 mm): Footprint J801
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(4.0000 mm, 126.0000 mm): Footprint H103
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(97.8050 mm, 108.6450 mm): Footprint R305
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(163.8050 mm, 84.1450 mm): Footprint R508
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(36.8050 mm, 67.1450 mm): Footprint R401
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(142.0350 mm, 14.7550 mm): Footprint U603
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(96.5750 mm, 95.7750 mm): Footprint D302
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(73.8750 mm, 15.6250 mm): Footprint D701
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(131.8250 mm, 29.6750 mm): Footprint C603
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(137.8050 mm, 26.1450 mm): Footprint R601
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(157.8050 mm, 72.1450 mm): Footprint R501
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(53.0350 mm, 16.7550 mm): Footprint Q701
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(19.5250 mm, 26.7750 mm): Footprint C102
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(128.0000 mm, 100.0000 mm): Footprint U502
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(119.1250 mm, 13.5750 mm): Footprint U601
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(69.8050 mm, 76.1450 mm): Footprint R204
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(149.8050 mm, 30.1450 mm): Footprint R605
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(19.3050 mm, 71.1450 mm): Footprint R402
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(44.0000 mm, 70.0000 mm): Footprint U401
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(132.3050 mm, 34.1450 mm): Footprint R608
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(71.0350 mm, 71.2550 mm): Footprint Q206
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(151.8050 mm, 88.1450 mm): Footprint R510
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(81.8050 mm, 79.6450 mm): Footprint R206
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(29.5250 mm, 33.2750 mm): Footprint C104
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(151.8250 mm, 76.1750 mm): Footprint C503
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(143.8250 mm, 26.1750 mm): Footprint C602
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(151.8250 mm, 72.1750 mm): Footprint C501
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(97.8050 mm, 104.6450 mm): Footprint R303
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(18.0000 mm, 9.0000 mm): Footprint F101
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(68.0000 mm, 6.0000 mm): Footprint J703
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(107.3050 mm, 15.1450 mm): Footprint R704
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(176.0000 mm, 68.0000 mm): Footprint H102
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(19.0000 mm, 90.0000 mm): Footprint J402
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(143.8050 mm, 30.1450 mm): Footprint R604
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(157.8050 mm, 88.1450 mm): Footprint R511
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(117.3050 mm, 107.1450 mm): Footprint R304
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(110.8050 mm, 111.6450 mm): Footprint R307
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(120.3050 mm, 37.1450 mm): Footprint R612
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(114.0750 mm, 94.7750 mm): Footprint D301
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(75.8050 mm, 79.6450 mm): Footprint R205
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(169.8050 mm, 74.1450 mm): Footprint R502
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(6.0000 mm, 54.0000 mm): Footprint J103
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(104.3250 mm, 103.6750 mm): Footprint C303
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(97.8050 mm, 112.6450 mm): Footprint R308
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(62.5350 mm, 71.2550 mm): Footprint Q205
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(45.6750 mm, 20.4250 mm): Footprint C103
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(162.0000 mm, 66.0000 mm): Footprint J803
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(157.8050 mm, 84.1450 mm): Footprint R507
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(108.0000 mm, 4.0000 mm): Footprint J706
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(74.0000 mm, 4.0000 mm): Footprint J701
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(169.8050 mm, 86.1450 mm): Footprint R509
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(128.0000 mm, 72.0000 mm): Footprint U501
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(117.3050 mm, 115.1450 mm): Footprint R310
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(114.3050 mm, 50.1450 mm): Footprint R802
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(28.0000 mm, 118.0000 mm): Footprint F202
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(173.2400 mm, 60.2600 mm): Footprint J802
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(104.3050 mm, 116.6450 mm): Footprint R312
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(169.8050 mm, 82.1450 mm): Footprint R506
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(155.0000 mm, 126.0000 mm): Footprint J503
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(138.3050 mm, 34.1450 mm): Footprint R609
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(89.3050 mm, 15.1450 mm): Footprint R701
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(109.3250 mm, 99.1750 mm): Footprint C301
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(63.2350 mm, 17.4250 mm): Footprint Q702
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(57.0000 mm, 113.0000 mm): Footprint R201
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(30.8250 mm, 67.1750 mm): Footprint C401
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(151.8250 mm, 80.1750 mm): Footprint C505
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(120.3050 mm, 33.1450 mm): Footprint R606
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(110.8050 mm, 115.6450 mm): Footprint R311
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(169.8050 mm, 78.1450 mm): Footprint R504
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(6.0000 mm, 102.0000 mm): Footprint J104
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(18.4750 mm, 19.0750 mm): Footprint D101
+[lib_footprint_issues]: The current configuration does not include the library 'cell_bench'.
+    Local override; Severity: warning
+    @(58.0000 mm, 126.0000 mm): Footprint J206
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

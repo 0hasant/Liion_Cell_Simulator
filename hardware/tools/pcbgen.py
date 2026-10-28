@@ -36,7 +36,7 @@ FIXED = {
 }
 # keep-out rectangles where plug-in modules overhang the board (no footprints)
 KEEPOUT = {
-    'Blue Pill': (154.5, 7.5, 177.5, 63.0),
+    'Blue Pill': (160.2, 9.0, 171.2, 62.0),
     'ADS1115 #1': (129.8, 69.0, 148.0, 97.0),
     'ADS1115 #2': (129.8, 97.5, 148.0, 122.0),
     'MCP4725 load': (99.8, 67.0, 114.0, 86.0),
@@ -46,12 +46,12 @@ KEEPOUT = {
 REGIONS = {
     'Power': [(17, 17, 52, 64)],
     'Charger': [(17, 66, 43, 92)],
-    'Cell_Relays': [(55, 62, 98, 96), (90, 98, 128, 113)],
-    'Electronic_Load': [(100, 88, 129, 118), (115, 62, 129, 88), (75, 108, 100, 118)],
-    'Measurement': [(55, 40, 128, 62)],
+    'Cell_Relays': [(55, 62, 98, 96), (55, 42, 98, 60)],
+    'Electronic_Load': [(95, 86, 127, 122), (75, 114, 95, 122)],
+    'Measurement': [(149, 71, 175, 121)],
     'Protection': [(118, 12, 153, 66)],
     'Thermal': [(36, 14, 116, 40)],
-    'MCU': [(150, 66, 178, 98), (150, 98, 176, 120)],
+    'MCU': [(100, 44, 117, 66), (55, 42, 98, 60)],
 }
 POWER_NETS = ['GND', 'VIN', '/Power/VIN_RAW', '/Cell_Relays/CELL_P', '/Cell_Relays/CELL_P_RAW',
               '/Cell_Relays/CELL_N', 'LOAD_P', '/Electronic_Load/LOAD_D', 'CHG_OUT',
@@ -116,6 +116,8 @@ def build(netfile, proj):
             ni = padnet.get((ref, pad.GetNumber()))
             if ni is not None:
                 pad.SetNet(ni)
+                if ni.GetNetname() == 'GND' and pad.GetAttribute() == pcbnew.PAD_ATTRIB_SMD:
+                    pad.SetZoneConnection(pcbnew.ZONE_CONNECTION_FULL)
         board.Add(fp)
         fps[ref] = (fp, sheet)
     # fixed placement
@@ -133,7 +135,7 @@ def build(netfile, proj):
     # shelf packing of the rest, per sheet region
     def free(r):
         return all(r[2] <= o[0] or r[0] >= o[2] or r[3] <= o[1] or r[1] >= o[3] for o in occupied)
-    gap = 1.0
+    gap = 2.6
     unplaced = []
     by_sheet = {}
     for ref, (fp, sheet) in fps.items():
@@ -148,6 +150,7 @@ def build(netfile, proj):
             # resistors/caps vertical saves width in rows
             cx0, cy0, cx1, cy1 = courtyard(fp)
             w, h = cx1 - cx0, cy1 - cy0
+            gap = 3.4 if sheet == 'Electronic_Load' else 2.6
             placed = False
             for (rx0, ry0, rx1, ry1) in REGIONS[sheet]:
                 y = ry0
@@ -175,7 +178,8 @@ def build(netfile, proj):
         z.SetDoNotAllowFootprints(True)
         z.SetDoNotAllowTracks(False); z.SetDoNotAllowVias(False)
         z.SetDoNotAllowPads(False); z.SetDoNotAllowCopperPour(False)
-        z.SetLayerSet(pcbnew.LSET.AllCuMask())
+        ls = pcbnew.LSET(); ls.AddLayer(pcbnew.F_Cu); ls.AddLayer(pcbnew.B_Cu)
+        z.SetLayerSet(ls)
         z.SetZoneName('Module overhang: ' + name)
         ol = z.Outline(); ol.NewOutline()
         for (px, py) in [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]:
@@ -190,6 +194,7 @@ def build(netfile, proj):
         z.SetPadConnection(pcbnew.ZONE_CONNECTION_THERMAL)
         z.SetThermalReliefGap(MM(0.5)); z.SetThermalReliefSpokeWidth(MM(0.8))
         z.SetAssignedPriority(0)
+        z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
         ol = z.Outline(); ol.NewOutline()
         for (px, py) in [(0.5, 0.5), (W - 0.5, 0.5), (W - 0.5, H - 0.5), (0.5, H - 0.5)]:
             ol.Append(MM(px), MM(py))
@@ -211,7 +216,7 @@ def netclasses(proj):
             "diff_pair_width": 0.2, "line_style": 0, "microvia_diameter": 0.3, "microvia_drill": 0.1,
             "pcb_color": "rgba(0, 0, 0, 0.000)", "schematic_color": "rgba(0, 0, 0, 0.000)",
             "track_width": 0.4, "via_diameter": 0.9, "via_drill": 0.5, "wire_width": 6}
-    classes = [dict(base, name='Default')]
+    classes = [dict(base, name="Default", clearance=0.2, track_width=0.3)]
     classes.append(dict(base, name='HighCurrent', clearance=0.5, track_width=3.0, via_diameter=1.6, via_drill=1.0))
     classes.append(dict(base, name='Supply', clearance=0.3, track_width=1.0, via_diameter=1.2, via_drill=0.7))
     classes.append(dict(base, name='Sense', clearance=0.3, track_width=0.3))
@@ -227,7 +232,8 @@ def netclasses(proj):
     pro['board']['design_settings'] = {
         "rules": {"min_clearance": 0.2, "min_track_width": 0.25, "min_via_diameter": 0.6,
                   "min_through_hole_diameter": 0.3, "min_copper_edge_clearance": 0.5,
-                  "min_hole_clearance": 0.25, "min_hole_to_hole": 0.25, "min_silk_clearance": 0.0},
+                  "min_hole_clearance": 0.25, "min_hole_to_hole": 0.25, "min_silk_clearance": 0.0,
+                  "min_resolved_spokes": 1},
         "track_widths": [0.0, 0.3, 0.4, 0.6, 1.0, 1.5, 2.0, 3.0, 4.0],
         "via_dimensions": [{"diameter": 0.0, "drill": 0.0}, {"diameter": 0.9, "drill": 0.5},
                            {"diameter": 1.2, "drill": 0.7}, {"diameter": 1.6, "drill": 1.0}],
