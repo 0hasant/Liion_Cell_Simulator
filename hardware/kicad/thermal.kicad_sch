@@ -1583,7 +1583,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "BTS7960 power: B+ B- M+ M-"
+    (property "Value" "BTS7960 power: B+ B- (M+ M- unused, Peltiers wired at the BTS7960)"
       (at 104.52 40.87 0)
       (effects
         (font
@@ -1677,109 +1677,6 @@
         (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/909b9f20-8afe-485a-a5d1-f095b4bf03f2"
           (reference "#PWR098")
           (unit 1)))))
-  (wire
-    (pts
-      (xy 91.44 41.91)
-      (xy 88.9 41.91))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 8a31d52a-d777-431e-a279-044ac7c0f99e))
-  (label "TEC_A"
-    (at 88.9 41.91 180)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right bottom))
-    (uuid 4c2d9f63-677b-409c-8be6-35e7414e9527))
-  (wire
-    (pts
-      (xy 91.44 44.45)
-      (xy 88.9 44.45))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 01f45915-5bf5-48ff-9acd-832819d9f616))
-  (label "TEC_B"
-    (at 88.9 44.45 180)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right bottom))
-    (uuid 7c618b68-ca6a-4dae-8695-e9e1745fe401))
-  (symbol
-    (lib_id "Connector:Screw_Terminal_01x02")
-    (at 158.75 39.37 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid 7e19f701-5bb3-4744-a1ba-244c61947bf5)
-    (property "Reference" "J703"
-      (at 166.75 34.37 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "Peltier 2x TEC1-12706 in series"
-      (at 166.75 40.87 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "cell_bench:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
-      (at 164.75 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" "~"
-      (at 164.75 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid 8c6be858-0c1f-4aa8-a229-4f6c124adc7b))
-    (pin "2"
-      (uuid 798a6177-2b62-45d4-8549-63b149fe0c9c))
-    (instances
-      (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/909b9f20-8afe-485a-a5d1-f095b4bf03f2"
-          (reference "J703")
-          (unit 1)))))
-  (wire
-    (pts
-      (xy 153.67 39.37)
-      (xy 151.13 39.37))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 75d9ca8d-5ccc-4121-922d-46cc2967bb17))
-  (label "TEC_A"
-    (at 151.13 39.37 180)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right bottom))
-    (uuid 2c1fce58-3953-4055-ab34-9da11f7ddaee))
-  (wire
-    (pts
-      (xy 153.67 41.91)
-      (xy 151.13 41.91))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid ac630761-0847-40df-ab24-5be48ffebe81))
-  (label "TEC_B"
-    (at 151.13 41.91 180)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right bottom))
-    (uuid 334d21fa-d17d-442a-947b-4f7e1a7cd6cb))
   (symbol
     (lib_id "Device:R")
     (at 220.98 39.37 0)
@@ -2859,4 +2756,10 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid af91c5ac-bb02-49e6-ab1c-550c73bc4022)))
+    (uuid af91c5ac-bb02-49e6-ab1c-550c73bc4022))
+  (no_connect
+    (at 91.44 41.91)
+    (uuid 5d1c0a3e-7b2f-4c61-9a0e-1f3b2c4d5e61))
+  (no_connect
+    (at 91.44 44.45)
+    (uuid 5d1c0a3e-7b2f-4c61-9a0e-1f3b2c4d5e62)))

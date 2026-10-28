@@ -5,7 +5,7 @@ Read this first in any new chat about the Li-ion cell test bench. It is where th
 - Repo: `0hasant/Liion_Cell_Simulator`.
 - **Master copy: `docs/PROJECT_SYNC.md` in the repo.** The Claude Project "Li-ion cell characteristic tester" holds a mirror. Edit the repo file, commit, then update the Project copy with the same text.
 
-Last updated: 2026-10-28 (repo state v0.2)
+Last updated: 2026-10-28 (repo state v0.2, layout v0.3 in progress)
 
 ## 1. Goal
 
@@ -98,7 +98,8 @@ Rule: a chat edits only its own area. If it needs something from the other area,
 - **TO-247 3D model:** the KiCad model has long leads showing below the PCB; cut the real leads after soldering.
 - **3D envelopes:** heatsink and module shapes in the 3D assembly are envelopes. Re-measure the real purchased parts and update the parameters at the top of `mechanical/enclosure.py`.
 - **Lowest cell temperature:** depends on the hot-side heatsink; measure before relying on below-ambient tests.
-- **PCB layout:** autorouted, electrically complete (DRC clean) but not yet hand-tidied. The layout may still change, so mechanics should re-export the board STEP before finalizing.
+- **PCB layout:** the v0.2 autorouted layout had many problems and is being replaced. Routing is now done by Quilter (AI layout), with Claude preparing inputs, reviewing candidates against `docs/LAYOUT_REVIEW.md` and picking the best one. Quilter can't make single-sided boards (see `docs/QUILTER_NOTES.md`), so the result is 2-layer: mill both sides on the Snapmaker or hand-convert to single-sided with jumpers. Connector, mounting-hole and Q301 positions are locked, so the mechanical interface in section 4 stays valid; re-export the board STEP once a layout is chosen.
+- **Fabrication:** boards will be CNC-milled in-house on the Snapmaker Artisan / Artisan Premium (400 x 400 mm CNC area), so the 100 x 100 mm fab-house price limit no longer applies. Design rules: 0.5 mm track, 0.4 mm clearance, 1 mm edge margin, 0.9 mm via holes.
 - **Budget:** not verified. `hardware/bom.csv` has no prices yet. Peltiers, heatsinks, aluminium plate, relays, OPA2188, LVK25, modules and filament together may exceed 1500 TL. Price the BOM before ordering.
 - **Supply:** OPA2188 showed 0 stock at Özdisan (request price). Alternative OPA2187.
 
@@ -118,6 +119,7 @@ Add one line per item: `date | from -> to | request | status`.
 2. If hardware moves a connector, heatsink position, or mounting hole, the PCB STEP must be regenerated and the mechanical chat told via section 7.
 3. If mechanics changes box size, standoff height, or cable path, the hardware chat is told via section 7.
 4. Start of every chat: read this file, then `README.md` (and `mechanical/README.md` for 3D work). Keep summaries of decisions in this file, not only in chat.
+   - PCB layout work: also read `docs/QUILTER_NOTES.md` (what Quilter can't do, job settings) and `docs/LAYOUT_REVIEW.md` (checklist every layout must pass).
 5. After editing this file in the repo, copy the same text to the Claude Project (`claude/PROJECT_SYNC.md`).
 
 ## 9. Changelog
@@ -127,3 +129,4 @@ Add one line per item: `date | from -> to | request | status`.
   - File committed to the repo as master.
   - Added: BTS7960 location mismatch (section 7), per-cell charge limit, thermostat mount, NTC locations, mounting-hole coordinates, cable list, SOIC-8/LVK25 in the hand-solder rule.
   - Budget marked as not verified.
+- 2026-10-28: layout moved to Quilter (job "v0.3 CNC 2-layer, 0.5/0.4mm, 11A cell path"); in-house CNC milling; added `docs/QUILTER_NOTES.md` and `docs/LAYOUT_REVIEW.md`.
