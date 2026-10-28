@@ -3284,4 +3284,32 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 1e055127-d281-4cb9-837c-438c3631e583)))
+    (uuid 1e055127-d281-4cb9-837c-438c3631e583))  (text "v0.3 REVIEW NOTES - explained in docs/SCHEMATIC_GUIDE.md section 5; checklist with comment columns in docs/SCHEMATIC_REVIEW.md"
+    (at 25 200.5 0)
+    (effects
+      (font
+        (size 1.5 1.5) bold)
+      (justify left top))
+    (uuid 98c0b7bf-bdef-4806-a314-b14da8404ffc))
+  (text "How it works: U501 A0-A1 = shunt (0.8 mA/bit), A2-A3 = cell voltage / 2 between the Kelvin wires. U502 = 4 NTCs (10k pull-up, B3950)."
+    (at 25 205.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid b75971bf-dfa5-45f4-989d-25fd94e87bdd))
+  (text "V_FAST (R510/R511) -> PA1 for fast pulses (R0); referenced to GND, so subtract I x R_shunt."
+    (at 25 210.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 0edc1437-ad87-45a4-b10c-eeddaef1af9f))
+  (text "CHECK M-02: R503/R504 0.1 %.  M-04: the SENSE_P dividers drain ~0.9 mA from the cell and back-power unpowered ICs when the bench is off."
+    (at 25 214.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid d6a16784-1d7d-4be4-b266-9ab39951eebb))
+)

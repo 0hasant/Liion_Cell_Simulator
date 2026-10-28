@@ -98,6 +98,7 @@ Rule: a chat edits only its own area. If it needs something from the other area,
 - **TO-247 3D model:** the KiCad model has long leads showing below the PCB; cut the real leads after soldering.
 - **3D envelopes:** heatsink and module shapes in the 3D assembly are envelopes. Re-measure the real purchased parts and update the parameters at the top of `mechanical/enclosure.py`.
 - **Lowest cell temperature:** depends on the hot-side heatsink; measure before relying on below-ambient tests.
+- **Schematic under review (2026-10-29):** Hasan is checking the schematic himself before layout restarts. Autonomous layout (Quilter) is paused; Hasan will set the rules and start the layout. Issues found so far are in `docs/SCHEMATIC_REVIEW.md` (most important: P-01 TVS rating, C-01 no hardware charge-current limit, U-01 D801/USB back-feed, X-01 OV/UV referenced to GND, R-02 BS170 gate drive, T-01 IBT-2 3.3 V logic, M-04 cell drain by dividers).
 - **PCB layout:** the v0.2 autorouted layout had many problems and is being replaced. Routing is now done by Quilter (AI layout), with Claude preparing inputs, reviewing candidates against `docs/LAYOUT_REVIEW.md` and picking the best one. Quilter can't make single-sided boards (see `docs/QUILTER_NOTES.md`), so the result is 2-layer: mill both sides on the Snapmaker or hand-convert to single-sided with jumpers. Connector, mounting-hole and Q301 positions are locked, so the mechanical interface in section 4 stays valid; re-export the board STEP once a layout is chosen.
 - **Fabrication:** boards will be CNC-milled in-house on the Snapmaker Artisan / Artisan Premium (400 x 400 mm CNC area), so the 100 x 100 mm fab-house price limit no longer applies. Design rules: 0.5 mm track, 0.4 mm clearance, 1 mm edge margin, 0.9 mm via holes.
 - **Budget:** not verified. `hardware/bom.csv` has no prices yet. Peltiers, heatsinks, aluminium plate, relays, OPA2188, LVK25, modules and filament together may exceed 1500 TL. Price the BOM before ordering.
@@ -120,6 +121,7 @@ Add one line per item: `date | from -> to | request | status`.
 3. If mechanics changes box size, standoff height, or cable path, the hardware chat is told via section 7.
 4. Start of every chat: read this file, then `README.md` (and `mechanical/README.md` for 3D work). Keep summaries of decisions in this file, not only in chat.
    - PCB layout work: also read `docs/QUILTER_NOTES.md` (what Quilter can't do, job settings) and `docs/LAYOUT_REVIEW.md` (checklist every layout must pass).
+   - Schematic work: read `docs/SCHEMATIC_GUIDE.md` (block-by-block explanation, PDF copy alongside) and `docs/SCHEMATIC_REVIEW.md` (checklist with Hasan's status/comments; open items there are not yet decided).
 5. After editing this file in the repo, copy the same text to the Claude Project (`claude/PROJECT_SYNC.md`).
 
 ## 9. Changelog
@@ -131,3 +133,4 @@ Add one line per item: `date | from -> to | request | status`.
   - Budget marked as not verified.
 - 2026-10-28: layout moved to Quilter (job "v0.3 CNC 2-layer, 0.5/0.4mm, 11A cell path"); in-house CNC milling; added `docs/QUILTER_NOTES.md` and `docs/LAYOUT_REVIEW.md`.
 - 2026-10-28: BTS7960 location decided: option (a), driver in the thermal unit, Peltiers wired directly to it; J703 and J702 M+/M- to be removed from the PCB.
+- 2026-10-29 (v0.3.2): layout paused for a schematic review by Hasan. Added `docs/SCHEMATIC_GUIDE.md` (+ PDF and figures in `docs/schematic_guide/`), `docs/SCHEMATIC_REVIEW.md`, and v0.3 review notes on every schematic sheet (MCU sheet note about D801 corrected).

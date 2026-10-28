@@ -1645,4 +1645,32 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid b603a779-c734-43e9-868d-f228b6d55da1)))
+    (uuid b603a779-c734-43e9-868d-f228b6d55da1))  (text "v0.3 REVIEW NOTES - explained in docs/SCHEMATIC_GUIDE.md section 4; checklist with comment columns in docs/SCHEMATIC_REVIEW.md"
+    (at 25 137.0 0)
+    (effects
+      (font
+        (size 1.5 1.5) bold)
+      (justify left top))
+    (uuid e7ff7dd8-f0ba-4316-8559-a201902c24ab))
+  (text "How it works: XL4016 holds FB = 1.25 V. Current injected into FB (DAC -> R402 -> R401 -> D401) makes the output LOWER. DAC = 0 -> pot setting (4.25 V)."
+    (at 25 142.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 5cbf6700-22ca-4049-9ad3-39d16acd23e4))
+  (text "CHECK C-01: NO hardware charge-current limit (module CC bypassed); only the 6.4 A comparator. Firmware must match voltages before closing K1."
+    (at 25 146.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 4602c7f0-591b-469e-8011-0afe30df0391))
+  (text "CHECK C-02: measure your module FB resistors; the 360 / 860 Ohm values are assumed."
+    (at 25 151.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid d9267894-3933-44d3-8dfa-ca9a3bffd5c5))
+)

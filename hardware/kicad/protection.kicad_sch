@@ -4141,4 +4141,32 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 8f719901-c8da-4a35-b096-cff5bfd6c727)))
+    (uuid 8f719901-c8da-4a35-b096-cff5bfd6c727))  (text "v0.3 REVIEW NOTES - explained in docs/SCHEMATIC_GUIDE.md section 6; checklist with comment columns in docs/SCHEMATIC_REVIEW.md"
+    (at 25 239.0 0)
+    (effects
+      (font
+        (size 1.5 1.5) bold)
+      (justify left top))
+    (uuid 57e5b314-dae6-417d-bdb6-c42f1f71481c))
+  (text "How it works: TL431 = 2.50 V. Six comparators, open collector, wired-OR on FAULT_N. Q601 inverts to FAULT -> Q303 (load), Q205/Q206 (relays), Q701 (BTS7960)."
+    (at 25 244.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 3add3ca0-db84-4ddd-8fda-91398e5dca8d))
+  (text "Trips: OV 4.29 V, UV 1.95 V, OC +11.25 A / -6.39 A, heatsink and cell NTC 61.5 C."
+    (at 25 248.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 68945d52-af83-4438-a88f-ef31414506a6))
+  (text "CHECK X-01: OV/UV measure SENSE_P vs GND, not SENSE_N (OV drops to ~4.24 V at 5 A charge).  X-03: no hysteresis."
+    (at 25 253.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid fc9a9fde-be62-4c16-b63e-accdfd032494))
+)

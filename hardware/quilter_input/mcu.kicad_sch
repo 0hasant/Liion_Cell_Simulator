@@ -2488,4 +2488,32 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 2396173d-e1b5-4a7d-960b-75ceb6a8abfc)))
+    (uuid 2396173d-e1b5-4a7d-960b-75ceb6a8abfc))  (text "v0.3 REVIEW NOTES - explained in docs/SCHEMATIC_GUIDE.md section 8; checklist with comment columns in docs/SCHEMATIC_REVIEW.md"
+    (at 25 137.0 0)
+    (effects
+      (font
+        (size 1.5 1.5) bold)
+      (justify left top))
+    (uuid 1576ad6a-3d9a-4014-bc75-ba7d35bb74ac))
+  (text "CORRECTION (v0.3): the Blue Pill 5V pin is wired directly to USB VBUS. D801 stops the PC from feeding the board +5V rail,"
+    (at 25 142.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid f82bcf8e-d7f2-45d8-a88c-bee117c46640))
+  (text "but lets the board feed ~4.7 V into the USB cable when the PC is off - the note above (D801 stops back-feeding the PC) is wrong. See U-01."
+    (at 25 146.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid c36cf2a9-0815-4c61-b917-a5432d7f3a73))
+  (text "CHECK U-02: Blue Pill 3.3 V regulator load.  U-04: I2C pull-ups on the modules."
+    (at 25 151.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 8661fc05-da53-4dd3-8a52-6bb20f832f36))
+)

@@ -3321,4 +3321,32 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 7efc7124-1739-4ab0-a131-498cdbc64694)))
+    (uuid 7efc7124-1739-4ab0-a131-498cdbc64694))  (text "v0.3 REVIEW NOTES - explained in docs/SCHEMATIC_GUIDE.md section 2; checklist with comment columns in docs/SCHEMATIC_REVIEW.md"
+    (at 25 205.0 0)
+    (effects
+      (font
+        (size 1.5 1.5) bold)
+      (justify left top))
+    (uuid e2f3f8d8-ccf2-4571-98f6-410c0dd95926))
+  (text "How it works: R201 (10 mOhm, pins 1/4 = current, 2/3 = Kelvin sense) is in the cell negative lead, so it sees charge AND discharge."
+    (at 25 210.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 48b06f4d-6436-44db-b415-1256c38fa5bf))
+  (text "GND is defined at R201 pin 4. Discharge: ISNS_N negative vs ISNS_G. Charge: ISNS_N positive. Relay coils 117 mA, 1.4 W (ALFG2PF121)."
+    (at 25 214.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 2c8b0b33-573c-4dc4-a30d-be59cd8cc995))
+  (text "CHECK R-02: BS170 at 3.3 V gate for 117 mA.  R-04: LVK25 pin numbering vs Ohmite drawing.  F-01: coil pads are 0.5 mm slots (not CNC-drillable)."
+    (at 25 219.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid ea5dcf6b-5dfc-4e7c-bfdf-92d272e275fb))
+)

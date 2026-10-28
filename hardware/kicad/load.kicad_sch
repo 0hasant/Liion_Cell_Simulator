@@ -4257,4 +4257,32 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 84a3d4f2-bb7e-4376-a8a7-3934e97c6d56)))
+    (uuid 84a3d4f2-bb7e-4376-a8a7-3934e97c6d56))  (text "v0.3 REVIEW NOTES - explained in docs/SCHEMATIC_GUIDE.md section 3; checklist with comment columns in docs/SCHEMATIC_REVIEW.md"
+    (at 25 248.0 0)
+    (effects
+      (font
+        (size 1.5 1.5) bold)
+      (justify left top))
+    (uuid 81aef7c9-819b-4a0f-a0b5-10ad50da4e3a))
+  (text "How it works: U301A integrates until INP = ISNS_G, i.e. (SETP - I x 10 mOhm)/2 = 0  ->  I = DAC x 1k/30.4k / 0.01 Ohm (3.3 V = 10.86 A)."
+    (at 25 253.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid b9f0189c-1af4-4974-94e8-83a4caff45a6))
+  (text "U301B: I_MON = 13 x MB - 12 x V(ISNS_N) = 1.65 V + 0.12 V/A (discharge positive). D301/D302 clamp it to 0..3.3 V."
+    (at 25 257.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid c53d6a87-a20f-4210-b626-6a6479cb799d))
+  (text "CHECK L-02 gate drive, L-03 loop stability (scope test), L-05 IRFP260N DC SOA, L-08 MCP4725 power-on value = 0, L-09 LOAD_OFF high while charging."
+    (at 25 262.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 3283f60b-9194-417c-bc34-ce456f40b58d))
+)

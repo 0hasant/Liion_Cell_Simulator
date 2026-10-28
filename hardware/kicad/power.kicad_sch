@@ -2759,4 +2759,32 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid f0159070-0c22-4e2c-a58c-824221787b65)))
+    (uuid f0159070-0c22-4e2c-a58c-824221787b65))  (text "v0.3 REVIEW NOTES - explained in docs/SCHEMATIC_GUIDE.md section 1; checklist with comment columns in docs/SCHEMATIC_REVIEW.md"
+    (at 25 205.0 0)
+    (effects
+      (font
+        (size 1.5 1.5) bold)
+      (justify left top))
+    (uuid 27a369f9-97d8-4641-9703-cb5a9054ff4f))
+  (text "How it works: 30 V PSU -> F101 -> VIN. Buck modules make +12V (J102) and +5V (J103). +3V3 comes from the Blue Pill."
+    (at 25 210.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 2e8609f6-0f6f-401a-8085-54284478ed9f))
+  (text "Thermostat J104 (60 C, on the load heatsink) cuts +12V_SW = relay coils + BTS7960, so the relays open and the Peltiers stop without firmware."
+    (at 25 214.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid c1cbcbf7-9c1e-49f4-b7fd-d935151b9436))
+  (text "CHECK P-01: P6KE33A stand-off 28.2 V is below the 30 V supply (P6KE36A?).  P-02..P-05: fuse and buck load budgets."
+    (at 25 219.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 6f0aa486-5688-4e10-a64d-dbfdb34e6470))
+)

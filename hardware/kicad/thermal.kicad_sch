@@ -2762,4 +2762,32 @@
     (uuid 5d1c0a3e-7b2f-4c61-9a0e-1f3b2c4d5e61))
   (no_connect
     (at 91.44 44.45)
-    (uuid 5d1c0a3e-7b2f-4c61-9a0e-1f3b2c4d5e62)))
+    (uuid 5d1c0a3e-7b2f-4c61-9a0e-1f3b2c4d5e62))  (text "v0.3 REVIEW NOTES - explained in docs/SCHEMATIC_GUIDE.md section 7; checklist with comment columns in docs/SCHEMATIC_REVIEW.md"
+    (at 25 166.5 0)
+    (effects
+      (font
+        (size 1.5 1.5) bold)
+      (justify left top))
+    (uuid e7e2b102-2f2e-4b11-b6a6-58611f8589da))
+  (text "v0.3: option (a) - BTS7960 sits in the thermal unit and the Peltiers wire straight to its M+/M-. J703 removed; J702 pins 3/4 not connected."
+    (at 25 171.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 323c507a-13d4-45ca-8971-fc4c6a58d456))
+  (text "How it works: BTS7960 = H-bridge; RPWM/LPWM choose cool/heat and power. TEC_EN (R701, R702 pull-down) is forced low by Q701 on FAULT."
+    (at 25 176.0 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid b68f4546-cf2d-4c6f-9e4a-61c383dc1100))
+  (text "CHECK T-01: IBT-2 input buffer (74HC244 at 5 V) may not accept 3.3 V logic.  T-02: IRLZ44N driven with 3.3 V."
+    (at 25 180.5 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 3fe207f8-a61e-4aeb-a80f-7757fea7faeb))
+)
