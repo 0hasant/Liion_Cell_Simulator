@@ -63,7 +63,7 @@ Rule: a chat edits only its own area. If it needs something from the other area,
 |---|---|
 | Electronics box | 214 x 214 x 89 mm outer (86 mm base + 3 mm lid) |
 | Thermal unit | 130 x 130 x ~142 mm outer |
-| BTS7960 (Peltier driver) | Mounted in the thermal unit, under the vented rear cover (see section 7) |
+| BTS7960 (Peltier driver) | Mounted in the thermal unit, under the vented rear cover. Peltiers wire directly to its M+/M- (decided, section 7) |
 | Cell pocket | 100 x 50 x 6 mm aluminium cold plate is the pocket floor. Saddles T6 (18650) / T7 (21700). Contact plates 22 x 22 x 1.5 mm copper with a P75 Kelvin probe. |
 | Cable links between units | Through grommets: cell power (2 x 1.5 mm2, short) + Kelvin sense (2 thin wires), BTS7960 supply (+12V_SW, GND) + logic (RPWM, LPWM, EN, 5 V, GND), NTCs (3 pairs), Peltier hot-side fan. Cell and sense wires must be short; power wires thick. |
 | Hardware to buy | See `mechanical/README.md` |
@@ -111,7 +111,7 @@ Add one line per item: `date | from -> to | request | status`.
   - The PCB routes the BTS7960 motor outputs back to the board (J702 M+/M- -> J703 -> Peltiers), but mechanics mounts the BTS7960 in the thermal unit. That sends the ~3 A Peltier current out, back and out again.
   - Decide one: (a) Peltiers wire directly to the BTS7960 in the thermal unit and J703 is not used (no PCB change needed, J702 M+/M- left open); or (b) move the BTS7960 into the electronics box.
   - Recommended: (a).
-  - Status: open.
+  - Status: **decided 2026-10-28: option (a).** The Peltiers wire straight to the BTS7960 M+/M- inside the thermal unit. Only +12V_SW/GND and the logic wires (RPWM, LPWM, EN, 5 V, GND) go from the electronics box to the thermal unit. Hardware: remove J703 and the M+/M- pins of J702 (TEC_A/TEC_B nets) in the next schematic revision. Mechanics: no change.
 
 ## 8. Change protocol
 
@@ -130,3 +130,4 @@ Add one line per item: `date | from -> to | request | status`.
   - Added: BTS7960 location mismatch (section 7), per-cell charge limit, thermostat mount, NTC locations, mounting-hole coordinates, cable list, SOIC-8/LVK25 in the hand-solder rule.
   - Budget marked as not verified.
 - 2026-10-28: layout moved to Quilter (job "v0.3 CNC 2-layer, 0.5/0.4mm, 11A cell path"); in-house CNC milling; added `docs/QUILTER_NOTES.md` and `docs/LAYOUT_REVIEW.md`.
+- 2026-10-28: BTS7960 location decided: option (a), driver in the thermal unit, Peltiers wired directly to it; J703 and J702 M+/M- to be removed from the PCB.

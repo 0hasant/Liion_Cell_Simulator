@@ -88,7 +88,9 @@ Fab-lab tests with V-bits and 1/64" mills put the reliable limits at about 0.4 m
 
 | Date | Job / candidate | Gates | A | B | C | D | E | F | Total | Vias | Top tracks | Decision |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | | | | | |
+| 2026-10-28 | v0.3 job, 1.1 | fail G1 (92.3 %), G2 | – | – | – | – | – | – | – | 111 | – | **keep for hand finishing** (all parts on top, fewest vias of the top-only candidates) |
+| 2026-10-28 | v0.3 job, 6.1 | fail G1 (93.7 %), G2 | – | – | – | – | – | – | – | 133 | – | runner-up: best routing but parts on both sides |
+| 2026-10-28 | v0.3 job, 2.1 / 3.1 / 4.1 / 5.1 | fail G1 (89.9-92.0 %) | – | – | – | – | – | – | – | 104-161 | – | rejected |
 
 ## Sources
 

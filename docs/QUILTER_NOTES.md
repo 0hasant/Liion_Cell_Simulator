@@ -50,4 +50,33 @@ Outputs come back in the same format we uploaded (KiCad). A candidate counts as 
 
 - Custom Component Proximity: R307 to Q301 gate; U301 to Q301; R201 to J205; D201/D202 to K1/K2; C304/C305 to U301; R501-R505 + C501/C502 to U501.
 - Floorplan regions: power corner (J205, F202, K1, K2, R201, Q301, J301, J401) vs analog block (U301, U501, U502, U302, U401, U601-U603) vs MCU/thermal (J801/J802, J701/J702, Q702).
-- If the BTS7960 moves to the thermal unit (PROJECT_SYNC section 7, option a), TEC_A/TEC_B and J703 can be removed from the schematic before the next job.
+- BTS7960 decided: option (a) (PROJECT_SYNC section 7). Before the next job, remove J703 and the J702 M+/M- pins (TEC_A/TEC_B) from the schematic, regenerate `hardware/quilter_input/`, and drop TEC_A/TEC_B from the power-net list.
+
+## 4. Results of the v0.3 job (finished 2026-10-28 21:37, 3 h 26 min)
+
+No candidate reached 100 % routing, so none is "successful" in Quilter's terms.
+
+| Candidate | Routed | Vias | Quilter DRC items | Parts |
+|---|---|---|---|---|
+| 1.1 | 92.3 % | 111 | 16 | all on top |
+| 2.1 | 91.3 % | 161 | 21 | all on top |
+| 3.1 | 92.0 % | 146 | 15 | all on top |
+| 4.1 | 90.9 % | 110 | 19 | both sides |
+| 5.1 | 89.9 % | 104 | 18 | both sides |
+| 6.1 | 93.7 % | 133 | 14 | both sides |
+
+- **Unrouted nets** in every candidate are mostly analog ones around R201/U301: ISNS_G, ISNS_N, GND, I_MON, MON_RAW/MN or OA_OUT/SETP/MB, ADC_IN, plus a few control lines (TEC_EN/PWM, K1_EN, SDA).
+- **"Prefer single-sided" is only a preference:** candidates 4-6 still put parts on the bottom.
+- **Via count is far too high for CNC** (104-161 wire vias).
+- **DRC items are mostly our own settings:**
+  - Setting the via hole minimum to 0.9 mm also flags every 0.8 mm component hole.
+  - Quilter's 0.4836 mm tracks are just under the 0.5 mm minimum.
+- **Real CNC problem found:** the K1/K2 relay coil pads (A1/A2) are **2.1 x 0.5 mm slots** (for flat blade pins). A 0.5 mm-wide slot needs a 0.5 mm end mill; a normal drill can't make it. Check the ALFG2PF121 pin size and change them to round holes (or wider slots) that the Snapmaker can drill.
+
+### Changes for the next job
+
+1. Use the new input (J703 and TEC_A/TEC_B removed).
+2. Take GND off the 11 A power-net list; keep the cell-path nets.
+3. Set the minimum hole to 0.8 mm (via hole stays 0.9 mm in practice), minimum trace 0.48 mm.
+4. Add Custom Component Proximity for U301/R201/R307/Q301 and the ADS1115 filters, and floorplan regions (power corner, analog block, MCU/thermal).
+5. Fix the relay coil pads in the footprint first (round holes the CNC can drill).
