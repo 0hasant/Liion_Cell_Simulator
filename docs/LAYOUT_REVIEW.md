@@ -15,7 +15,7 @@ Last updated: 2026-11-11. v0.4 is single-sided: all copper on `B.Cu`, wire jumpe
 
 | # | Gate | How to check |
 |---|---|---|
-| G1 | 0 unconnected items | `hardware/fab/drc.rpt` ("Found 0 unconnected") |
+| G1 | Every net complete once the wire jumpers are counted. (KiCad itself always lists one "unconnected" item per jumper wire, because it cannot see the wire.) | `hardware/fab/drc_summary.txt`, made by `fab.py` with `conncheck.py` |
 | G2 | 0 DRC errors with the CNC rules (0.5 mm track, 0.4 mm clearance, 1 mm from edge, 0.4 mm annular ring) | `drc.rpt` |
 | G3 | Fixed parts at their positions: all J*, K*, H101–H104, Q301, U501, R201 | Compare with the FIXED table in `hardware/tools/pcbgen.py` |
 | G4 | Kelvin nets carry no load current: `ISNS_G`, `ISNS_N` leave only from R201 pads 3/2; `SENSE_P`, `SENSE_N` only from J206 | Highlight each net |
