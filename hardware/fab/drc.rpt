@@ -1,0 +1,338 @@
+** Drc report for ../kicad/cell_test_bench.kicad_pcb **
+** Created on 2026-11-11 01:35:55 **
+
+** Found 0 DRC violations **
+
+** Found 82 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(134.4000 mm, 68.0000 mm): Track [+3V3] on B.Cu, length 0.9285 mm
+    @(124.8000 mm, 68.9000 mm): Track [+3V3] on B.Cu, length 0.9851 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(62.3000 mm, 41.4000 mm): Track [+5V] on B.Cu, length 0.9449 mm
+    @(54.0000 mm, 48.4000 mm): Track [+5V] on B.Cu, length 0.8485 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(117.6000 mm, 19.3000 mm): Track [+5V] on B.Cu, length 0.4000 mm
+    @(131.5000 mm, 36.8000 mm): Track [+5V] on B.Cu, length 13.8000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(88.7000 mm, 40.6700 mm): PTH pad 1 [+5V] of R601
+    @(93.2000 mm, 57.2200 mm): PTH pad 1 [+5V] of C602
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(88.7000 mm, 40.6700 mm): Track [+5V] on B.Cu, length 0.9751 mm
+    @(62.8000 mm, 41.9000 mm): Track [+5V] on B.Cu, length 0.7071 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(52.7000 mm, 47.0000 mm): PTH pad 1 [+5V] of C104
+    @(27.1000 mm, 15.1000 mm): Track [+5V] on B.Cu, length 0.1000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(77.4000 mm, 7.0000 mm): Track [+12V] on B.Cu, length 0.1414 mm
+    @(69.6000 mm, 6.5000 mm): Track [+12V] on B.Cu, length 0.4000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(84.2000 mm, 36.8600 mm): Track [+12V] on B.Cu, length 1.2254 mm
+    @(85.5000 mm, 53.2000 mm): Track [+12V] on B.Cu, length 0.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(33.5000 mm, 17.4000 mm): PTH pad 1 [+12V] of W2
+    @(55.4000 mm, 7.0000 mm): PTH pad 2 [+12V] of W2
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(29.7000 mm, 44.1000 mm): Track [+12V] on B.Cu, length 0.9862 mm
+    @(32.0000 mm, 18.5000 mm): Track [+12V] on B.Cu, length 1.2369 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(77.4000 mm, 7.0000 mm): Track [+12V] on B.Cu, length 0.1414 mm
+    @(82.2000 mm, 37.1000 mm): Track [+12V] on B.Cu, length 0.8000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(98.6000 mm, 63.7000 mm): PTH pad 2 [+12VA] of W6
+    @(105.5000 mm, 72.8000 mm): Track [+12VA] on B.Cu, length 2.5000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(85.3000 mm, 63.6000 mm): Track [+12VA] on B.Cu, length 0.1000 mm
+    @(98.1000 mm, 63.1000 mm): Track [+12VA] on B.Cu, length 0.9666 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(118.3000 mm, 89.8000 mm): PTH pad 4 [+12VA] of W6
+    @(106.7000 mm, 72.4400 mm): PTH pad 1 [+12VA] of C307
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(70.6000 mm, 18.2000 mm): Track [+12V_SW] on B.Cu, length 0.1000 mm
+    @(78.7000 mm, 22.9000 mm): Track [+12V_SW] on B.Cu, length 0.4000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(68.2000 mm, 18.8000 mm): PTH pad 1 [+12V_SW] of W8
+    @(54.8000 mm, 18.8000 mm): PTH pad 2 [+12V_SW] of W8
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(63.0000 mm, 48.0000 mm): Track [+12V_SW] on B.Cu, length 0.7071 mm
+    @(78.2000 mm, 26.3000 mm): PTH pad 2 [+12V_SW] of W7
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(25.7000 mm, 87.6600 mm): Track [/Cell_Relays/K1_B] on B.Cu, length 1.2472 mm
+    @(33.1000 mm, 90.0000 mm): PTH pad 2 [/Cell_Relays/K1_B] of W34
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(25.7000 mm, 90.2000 mm): PTH pad 1 [/Cell_Relays/K1_COIL] of Q201
+    @(30.2000 mm, 92.7400 mm): Track [/Cell_Relays/K1_COIL] on B.Cu, length 1.2343 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(62.5000 mm, 91.6000 mm): PTH pad 1 [/Cell_Relays/K2_COIL] of W37
+    @(73.1000 mm, 96.1000 mm): PTH pad 2 [/Cell_Relays/K2_COIL] of W37
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(39.5000 mm, 62.6000 mm): Track [/Charger/CC_INJ] on B.Cu, length 0.7071 mm
+    @(52.7000 mm, 54.6400 mm): PTH pad 2 [/Charger/CC_INJ] of R405
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(53.8000 mm, 63.7000 mm): Track [/Charger/CC_OUT] on B.Cu, length 0.5657 mm
+    @(124.7000 mm, 90.1600 mm): Track [/Charger/CC_OUT] on B.Cu, length 0.9867 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(120.2000 mm, 78.7700 mm): PTH pad 2 [/Charger/ILIM] of R406
+    @(133.3000 mm, 89.8000 mm): Track [/Charger/ILIM] on B.Cu, length 0.9758 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(20.0000 mm, 74.0000 mm): PTH pad 1 [/Charger/XL_FB] of J402
+    @(30.2000 mm, 55.9100 mm): PTH pad 1 [/Charger/XL_FB] of D401
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(93.2000 mm, 71.1900 mm): Track [/Electronic_Load/DL1] on B.Cu, length 0.9582 mm
+    @(125.8000 mm, 63.7000 mm): Track [/Electronic_Load/DL1] on B.Cu, length 1.5556 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(88.7000 mm, 82.5800 mm): PTH pad 1 [/Electronic_Load/INN] of R307
+    @(98.5250 mm, 98.6350 mm): Pad 2 [/Electronic_Load/INN] of U301 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(91.2000 mm, 69.2000 mm): Track [/Electronic_Load/LOFF_K] on B.Cu, length 0.1000 mm
+    @(109.8000 mm, 66.3000 mm): Track [/Electronic_Load/LOFF_K] on B.Cu, length 0.2828 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(99.2000 mm, 92.9000 mm): PTH pad 2 [/Electronic_Load/MON_RAW] of W45
+    @(111.2000 mm, 82.5800 mm): Track [/Electronic_Load/MON_RAW] on B.Cu, length 0.9851 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(142.7000 mm, 85.1600 mm): Track [/Measurement/ADC_IG] on B.Cu, length 0.9141 mm
+    @(117.6000 mm, 82.5000 mm): Track [/Measurement/ADC_IG] on B.Cu, length 1.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(39.2000 mm, 40.6700 mm): PTH pad 1 [/Power/K4_B] of R103
+    @(33.5000 mm, 45.6000 mm): Track [/Power/K4_B] on B.Cu, length 1.2093 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(91.8000 mm, 39.2000 mm): PTH pad 2 [/Protection/OV_DIV] of W51
+    @(112.2000 mm, 18.8000 mm): PTH pad 1 [/Protection/OV_DIV] of W51
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(102.9000 mm, 40.0000 mm): Track [/Protection/VREF_H] on B.Cu, length 0.9690 mm
+    @(84.2000 mm, 50.8300 mm): PTH pad 1 [/Protection/VREF_H] of R603
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(144.9000 mm, 29.1000 mm): Track [/Protection/VREF_H] on B.Cu, length 1.2876 mm
+    @(117.6000 mm, 26.9000 mm): PTH pad 1 [/Protection/VREF_H] of W65
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(129.1000 mm, 39.1000 mm): PTH pad 2 [/Protection/VREF_T] of W66
+    @(134.4000 mm, 26.8000 mm): PTH pad 1 [/Protection/VREF_T] of W66
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(61.3000 mm, 5.7000 mm): Track [/Thermal/FAN_N] on B.Cu, length 0.2828 mm
+    @(56.0000 mm, 10.4000 mm): Track [/Thermal/FAN_N] on B.Cu, length 0.1000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(64.5000 mm, 5.4000 mm): Track [/Thermal/FAN_N] on B.Cu, length 0.1000 mm
+    @(83.7000 mm, 24.9000 mm): Track [/Thermal/FAN_N] on B.Cu, length 0.4000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(58.3000 mm, 42.2000 mm): PTH pad 1 [/Thermal/K3_COIL] of W39
+    @(61.0000 mm, 55.7000 mm): PTH pad 2 [/Thermal/K3_COIL] of W39
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(57.2000 mm, 40.6700 mm): Track [/Thermal/K3_COIL] on B.Cu, length 1.2454 mm
+    @(54.8000 mm, 26.3000 mm): PTH pad 3 [/Thermal/K3_COIL] of W39
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(90.4000 mm, 7.0000 mm): Track [/Thermal/TEC_A] on B.Cu, length 0.1414 mm
+    @(75.4000 mm, 16.0000 mm): Track [/Thermal/TEC_A] on B.Cu, length 0.2828 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(75.7000 mm, 23.5000 mm): PTH pad 1 [/Thermal/TEC_B] of W59
+    @(86.2000 mm, 7.8000 mm): PTH pad 2 [/Thermal/TEC_B] of W59
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(70.7000 mm, 50.8300 mm): Track [/Thermal/TEC_G] on B.Cu, length 0.9904 mm
+    @(60.0000 mm, 34.0000 mm): PTH pad 1 [/Thermal/TEC_G] of Q703
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(173.2400 mm, 24.7000 mm): PTH pad 15 [ARM] of J802
+    @(142.8000 mm, 39.7000 mm): Track [ARM] on B.Cu, length 0.6000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(102.2000 mm, 26.7000 mm): PTH pad 1 [FAN_PWM] of R706
+    @(155.8000 mm, 22.2000 mm): PTH pad 2 [FAN_PWM] of W20
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(142.4000 mm, 26.5000 mm): Track [FAULT_N] on B.Cu, length 1.2363 mm
+    @(137.2000 mm, 16.5000 mm): Track [FAULT_N] on B.Cu, length 5.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(134.4000 mm, 16.2000 mm): PTH pad 1 [FAULT_N] of W21
+    @(123.6200 mm, 16.5400 mm): Track [FAULT_N] on B.Cu, length 0.9220 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(155.8000 mm, 19.2000 mm): Track [FAULT_N] on B.Cu, length 0.1414 mm
+    @(143.6200 mm, 16.5400 mm): PTH pad 13 [FAULT_N] of U602
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+    @(1.0000 mm, 1.0000 mm): Zone [GND] on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(114.6000 mm, 91.5000 mm): PTH pad 2 [ISNS_G] of W30
+    @(93.2000 mm, 92.7400 mm): PTH pad 2 [ISNS_G] of R317
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(138.3000 mm, 109.7000 mm): Track [ISNS_N] on B.Cu, length 1.0000 mm
+    @(113.2000 mm, 109.4600 mm): PTH pad 1 [ISNS_N] of R314
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(90.7000 mm, 109.4600 mm): Track [ISNS_N] on B.Cu, length 0.9108 mm
+    @(54.8000 mm, 117.6000 mm): Track [ISNS_N] on B.Cu, length 1.7000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(112.0000 mm, 50.3000 mm): Track [I_MON] on B.Cu, length 0.9596 mm
+    @(111.2000 mm, 68.6100 mm): Track [I_MON] on B.Cu, length 0.9809 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(128.0000 mm, 80.9000 mm): Track [I_MON] on B.Cu, length 1.1314 mm
+    @(170.9000 mm, 62.1000 mm): PTH pad 3 [I_MON] of W33
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(52.7000 mm, 68.6100 mm): PTH pad 1 [K1_EN] of R207
+    @(159.3000 mm, 12.3000 mm): Track [K1_EN] on B.Cu, length 1.3342 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(40.3000 mm, 77.6000 mm): PTH pad 2 [K2_EN] of W38
+    @(55.3000 mm, 68.1000 mm): PTH pad 1 [K2_EN] of W38
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(155.8000 mm, 14.9000 mm): PTH pad 3 [K2_EN] of W38
+    @(57.2000 mm, 68.6100 mm): PTH pad 1 [K2_EN] of R205
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(35.4000 mm, 49.1000 mm): Track [K4_COIL] on B.Cu, length 1.0706 mm
+    @(33.0000 mm, 26.0000 mm): PTH pad 2 [K4_COIL] of W41
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(48.2000 mm, 50.8300 mm): Track [K4_COIL] on B.Cu, length 1.2445 mm
+    @(74.6000 mm, 53.1000 mm): PTH pad 2 [K4_COIL] of W42
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(115.7000 mm, 54.6400 mm): PTH pad 2 [LOAD_OFF] of R310
+    @(158.0000 mm, 17.0800 mm): PTH pad 3 [LOAD_OFF] of J801
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(170.6000 mm, 81.1000 mm): Track [NTC_AIR] on B.Cu, length 1.1000 mm
+    @(133.7000 mm, 78.7700 mm): PTH pad 2 [NTC_AIR] of R507
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(143.5000 mm, 80.2000 mm): PTH pad 2 [NTC_CELL] of W47
+    @(161.2000 mm, 81.8500 mm): Track [NTC_CELL] on B.Cu, length 0.9657 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(171.1000 mm, 45.2000 mm): PTH pad 1 [NTC_CELL] of W48
+    @(136.0000 mm, 29.2400 mm): PTH pad 7 [NTC_CELL] of U602
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(166.7000 mm, 46.9000 mm): Track [NTC_HS] on B.Cu, length 0.8000 mm
+    @(137.6000 mm, 24.0000 mm): PTH pad 2 [NTC_HS] of W49
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(171.7000 mm, 108.5000 mm): PTH pad 2 [NTC_TEC] of W50
+    @(161.5000 mm, 77.1000 mm): PTH pad 1 [NTC_TEC] of W50
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(173.2400 mm, 37.4000 mm): PTH pad 10 [NTC_TEC] of J802
+    @(161.2000 mm, 75.4600 mm): PTH pad 2 [NTC_TEC] of R509
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(173.2400 mm, 32.3200 mm): PTH pad 12 [PWM_C] of J802
+    @(44.8000 mm, 77.6000 mm): PTH pad 1 [PWM_C] of W52
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(171.1000 mm, 30.0000 mm): Track [PWM_I] on B.Cu, length 0.8000 mm
+    @(120.8000 mm, 67.1000 mm): PTH pad 1 [PWM_I] of W53
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(126.6000 mm, 54.3000 mm): PTH pad 1 [PWM_L] of W54
+    @(171.1000 mm, 35.1000 mm): Track [PWM_L] on B.Cu, length 0.8000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(152.5000 mm, 74.3000 mm): PTH pad 2 [SCL] of W55
+    @(158.0000 mm, 45.0200 mm): Track [SCL] on B.Cu, length 1.3388 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(152.2000 mm, 77.3000 mm): PTH pad 2 [SDA] of W56
+    @(155.8000 mm, 47.4000 mm): PTH pad 1 [SDA] of W56
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(45.7000 mm, 52.8000 mm): PTH pad 2 [SW_B] of W57
+    @(61.1000 mm, 52.3000 mm): PTH pad 1 [SW_B] of W57
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(61.7000 mm, 50.8300 mm): PTH pad 2 [SW_B] of R101
+    @(142.0000 mm, 14.2000 mm): PTH pad 3 [SW_B] of W57
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(59.1000 mm, 65.1000 mm): PTH pad 2 [TEC_DIR] of W60
+    @(70.3000 mm, 63.9000 mm): Track [TEC_DIR] on B.Cu, length 0.7000 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(70.7000 mm, 64.8000 mm): PTH pad 1 [TEC_DIR] of R702
+    @(155.6000 mm, 53.4000 mm): PTH pad 3 [TEC_DIR] of W60
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(155.8000 mm, 50.4000 mm): PTH pad 2 [TEC_PWM] of W62
+    @(67.3000 mm, 63.6000 mm): PTH pad 1 [TEC_PWM] of W62
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(7.8000 mm, 46.2000 mm): PTH pad 2 [VIN] of W63
+    @(10.6000 mm, 37.7000 mm): Track [VIN] on B.Cu, length 2.9698 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(92.8000 mm, 52.4000 mm): Track [V_CELL] on B.Cu, length 0.4000 mm
+    @(106.8000 mm, 65.7000 mm): Track [V_CELL] on B.Cu, length 0.9055 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(106.8000 mm, 66.4000 mm): PTH pad 2 [V_CELL] of W67
+    @(138.2000 mm, 92.7400 mm): Track [V_CELL] on B.Cu, length 0.9806 mm
+[unconnected_items]: Missing connection between items
+    Local override; Severity: error
+    @(156.7000 mm, 79.2700 mm): Track [V_FAST] on B.Cu, length 0.9731 mm
+    @(138.8000 mm, 77.7000 mm): PTH pad 2 [V_FAST] of W68
+
+** Found 0 Footprint errors **
+
+** End of Report **

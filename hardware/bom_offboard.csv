@@ -1,0 +1,25 @@
+Qty,Item,Shop,Unit TL (VAT incl.),Line TL,Stock 2026-11-10,Link,Note
+1,Blue Pill STM32F103C8T6 board (clone),Motorobit,281.52,281.52,100+ in stock,https://www.motorobit.com/stm32f103c8t6-arm-mini-gelistirme-karti,sold out at Direnc and Robotistan
+2,XL4016 8 A step-down module (12 V rail and charger),Motorobit,244.80,489.60,10+ in stock,https://www.motorobit.com/xl4016-8a-dc-dc-step-down-voltaj-regulatoru,60 x 37 mm board; sold out at Direnc and Robotistan
+1,"Single-sided FR4 copper clad 20 x 30 cm (board blank, enough for one retry)",Robotistan,144.90,144.90,in stock,https://www.robotistan.com/20x30-bakir-plaket-fr4-epoksi,
+2,TEC1-12706 Peltier 40 x 40 mm,Robotistan,313.41,626.82,in stock,https://www.robotistan.com/tec1-12706,Direnc: 174.35 TL but sold out
+2,"CPU cooler 80 x 80 x 54 mm with 12 V fan (load heatsink, Peltier hot side)",Motorobit,397.80,795.60,"listed, add-to-cart shown",https://www.motorobit.com/80x80x54mm-sogutuculu-fan-islemci-fani,331.50 TL + VAT
+1,0.1 Ohm 50 W aluminium-housed resistor,Direnc.net,114.33,114.33,in stock,https://www.direnc.net/010r-50w-aluminyum-direnc,
+1,"KSD9700 thermostat 60 C, normally closed",Motorobit,27.54,27.54,in stock,https://www.motorobit.com/ksd9700-250v-5a-nc-60-c-metal-termostat,22.95 TL + VAT
+4,NTC 10k thermistor TTC05103 (solder to a thin 2-wire cable),Direnc.net,8.38,33.52,in stock,https://www.direnc.net/ttc05103jsy-ntc-termistor-10k-5,B value is about 4050 K: set it in firmware
+1,30 x 30 x 10 mm 12 V fan (pocket mixing),Robotistan,91.10,91.10,in stock,https://www.robotistan.com/sogutma-fan-12v-kablo-28cm,
+2,"Inline mini blade fuse holder with leads (PSU + lead, cell + lead)",Direnc.net,32.18,64.36,in stock,https://www.direnc.net/sigota-yuvasi-kablolu-30cm,shorten the leads on the cell side
+2,Mini blade fuses: 5 A (PSU) and 15 A (cell),auto parts shop,10.00,20.00,not checked,,price estimated
+2,"4 mm binding post (red, black) for the PSU input",Direnc.net,31.96,63.92,"in stock (red), black was sold out in one type",https://www.direnc.net/4mm-kirmizi-gold-born-jak-16121,
+1,"Spring test probes for the Kelvin contacts (P75 or 3 mm pogo pins, pack)",Direnc.net,120.98,120.98,in stock (3 mm pack of 10); P75 pack sold out,https://www.direnc.net/3mm-pogo-pim-100-adet,
+1,Aluminium flat bar 100 x 50 x 6 mm (cold plate),metal / hardware shop,100.00,100.00,not checked,,price estimated
+1,"Copper sheet 1.5 mm, 2 pieces 22 x 22 mm (cell contacts)",metal / hardware shop,60.00,60.00,not checked,,price estimated
+1,Thermal paste + 1 mm thermal pad 80 x 30 mm,computer shop,120.00,120.00,not checked,,price estimated
+1,"M3 heat-set inserts (about 30), M3 screws, M4 thumbscrew + insert, 4 standoffs",hardware shop / marketplace,200.00,200.00,not checked,,price estimated
+1,"Wire: 1.5 mm2 (cell loop, 2 m), 0.75 mm2 (power, 3 m), thin 2-core (sensors, 5 m), 0.6 mm solid (jumpers)",electrical shop,150.00,150.00,not checked,,price estimated
+1,"PETG filament 1.75 mm, 1 kg",Robotistan,724.10,724.10,in stock,https://www.robotistan.com/fibromast-3d-175-mm-petg-filament-sari,both boxes need about 0.9 kg
+1,"PCB milling bits: 30 deg V-bit 0.1 mm, drills 0.8 / 1.0 / 1.3 mm, 1 mm end mill",marketplace,250.00,250.00,not checked,,only if you do not have them; price estimated
+
+,"Modules, mechanics and consumables total",,,4478.29
+,PCB parts total,,,1036.53
+,GRAND TOTAL,,,5514.82

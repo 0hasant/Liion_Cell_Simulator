@@ -1,137 +1,14 @@
 (kicad_sch
   (version 20230121)
   (generator eeschema)
-  (uuid 0e9a54d4-ab1c-4f29-bb89-715241536147)
+  (uuid f82b6e90-4c75-4844-9faa-19744306ee8d)
   (paper "A3")
   (title_block
     (title "Cell connection, shunt and relays K1/K2")
-    (date "2026-10-13")
-    (rev "0.1 draft")
+    (date "2026-11-10")
+    (rev "0.4")
     (company "Solaris - cell test bench"))
   (lib_symbols
-    (symbol "Connector:Screw_Terminal_01x02"
-      (pin_names
-        (offset 1.016) hide)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "J"
-        (at 0 2.54 0)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Value" "Screw_Terminal_01x02"
-        (at 0 -5.08 0)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Footprint" ""
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "Datasheet" "~"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "ki_keywords" "screw terminal"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "ki_description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "ki_fp_filters" "TerminalBlock*:*"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (symbol "Screw_Terminal_01x02_1_1"
-        (rectangle
-          (start -1.27 1.27)
-          (end 1.27 -3.81)
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type background)))
-        (circle
-          (center 0 -2.54)
-          (radius 0.635)
-          (stroke
-            (width 0.1524)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy -0.5334 -2.2098)
-            (xy 0.3302 -3.048))
-          (stroke
-            (width 0.1524)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy -0.5334 0.3302)
-            (xy 0.3302 -0.508))
-          (stroke
-            (width 0.1524)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy -0.3556 -2.032)
-            (xy 0.508 -2.8702))
-          (stroke
-            (width 0.1524)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy -0.3556 0.508)
-            (xy 0.508 -0.3302))
-          (stroke
-            (width 0.1524)
-            (type default))
-          (fill
-            (type none)))
-        (circle
-          (center 0 0)
-          (radius 0.635)
-          (stroke
-            (width 0.1524)
-            (type default))
-          (fill
-            (type none)))
-        (pin passive line
-          (at -5.08 0 0)
-          (length 3.81)
-          (name "Pin_1"
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -2.54 0)
-          (length 3.81)
-          (name "Pin_2"
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)))))))
     (symbol "Connector_Generic:Conn_01x02"
       (pin_names
         (offset 1.016) hide)
@@ -212,88 +89,6 @@
           (at -5.08 -2.54 0)
           (length 3.81)
           (name "Pin_2"
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)))))))
-    (symbol "Device:Fuse"
-      (pin_numbers hide)
-      (pin_names
-        (offset 0))
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "F"
-        (at 2.032 0 90)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Value" "Fuse"
-        (at -1.905 0 90)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Footprint" ""
-        (at -1.778 0 90)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "Datasheet" "~"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "ki_keywords" "fuse"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "ki_description" "Fuse"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "ki_fp_filters" "*Fuse*"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (symbol "Fuse_0_1"
-        (rectangle
-          (start -0.762 -2.54)
-          (end 0.762 2.54)
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0 -2.54))
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type none))))
-      (symbol "Fuse_1_1"
-        (pin passive line
-          (at 0 3.81 270)
-          (length 1.27)
-          (name "~"
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)))))
-        (pin passive line
-          (at 0 -3.81 90)
-          (length 1.27)
-          (name "~"
             (effects
               (font
                 (size 1.27 1.27))))
@@ -411,6 +206,96 @@
               (font
                 (size 1.27 1.27))))
           (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "Jumper:Jumper_2_Bridged"
+      (pin_names
+        (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "JP"
+        (at 0 1.905 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Jumper_2_Bridged"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "Jumper SPST"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_description" "Jumper, 2-pole, closed/bridged"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "Jumper_2_Bridged_0_0"
+        (circle
+          (center -2.032 0)
+          (radius 0.508)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (circle
+          (center 2.032 0)
+          (radius 0.508)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Jumper_2_Bridged_0_1"
+        (arc
+          (start 1.524 0.254)
+          (mid 0 0.762)
+          (end -1.524 0.254)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Jumper_2_Bridged_1_1"
+        (pin passive line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 5.08 0 180)
+          (length 2.54)
+          (name "B"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
             (effects
               (font
                 (size 1.27 1.27)))))))
@@ -679,7 +564,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))))
-    (symbol "Device:D"
+    (symbol "Device:D_Schottky"
       (pin_numbers hide)
       (pin_names
         (offset 1.016) hide)
@@ -690,7 +575,7 @@
         (effects
           (font
             (size 1.27 1.27))))
-      (property "Value" "D"
+      (property "Value" "D_Schottky"
         (at 0 -2.54 0)
         (effects
           (font
@@ -705,22 +590,12 @@
         (effects
           (font
             (size 1.27 1.27)) hide))
-      (property "Sim.Device" "D"
+      (property "ki_keywords" "diode Schottky"
         (at 0 0 0)
         (effects
           (font
             (size 1.27 1.27)) hide))
-      (property "Sim.Pins" "1=K 2=A"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "ki_keywords" "diode"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "ki_description" "Diode"
+      (property "ki_description" "Schottky diode"
         (at 0 0 0)
         (effects
           (font
@@ -730,16 +605,7 @@
         (effects
           (font
             (size 1.27 1.27)) hide))
-      (symbol "D_0_1"
-        (polyline
-          (pts
-            (xy -1.27 1.27)
-            (xy -1.27 -1.27))
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type none)))
+      (symbol "D_Schottky_0_1"
         (polyline
           (pts
             (xy 1.27 0)
@@ -759,8 +625,21 @@
             (width 0.254)
             (type default))
           (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.905 0.635)
+            (xy -1.905 1.27)
+            (xy -1.27 1.27)
+            (xy -1.27 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 -0.635))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
             (type none))))
-      (symbol "D_1_1"
+      (symbol "D_Schottky_1_1"
         (pin passive line
           (at -3.81 0 0)
           (length 2.54)
@@ -783,8 +662,9 @@
             (effects
               (font
                 (size 1.27 1.27)))))))
-    (symbol "Transistor_FET:BS170"
-      (pin_names hide)
+    (symbol "Transistor_BJT:BC337"
+      (pin_names
+        (offset 0) hide)
       (in_bom yes)
       (on_board yes)
       (property "Reference" "Q"
@@ -793,7 +673,7 @@
           (font
             (size 1.27 1.27))
           (justify left)))
-      (property "Value" "BS170"
+      (property "Value" "BC337"
         (at 5.08 0 0)
         (effects
           (font
@@ -805,18 +685,18 @@
           (font
             (size 1.27 1.27) italic)
           (justify left) hide))
-      (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-        (at 5.08 -3.81 0)
+      (property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf"
+        (at 0 0 0)
         (effects
           (font
             (size 1.27 1.27))
           (justify left) hide))
-      (property "ki_keywords" "N-Channel MOSFET"
+      (property "ki_keywords" "NPN Transistor"
         (at 0 0 0)
         (effects
           (font
             (size 1.27 1.27)) hide))
-      (property "ki_description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
+      (property "ki_description" "0.8A Ic, 45V Vce, NPN Transistor, TO-92"
         (at 0 0 0)
         (effects
           (font
@@ -826,11 +706,11 @@
         (effects
           (font
             (size 1.27 1.27)) hide))
-      (symbol "BS170_0_1"
+      (symbol "BC337_0_1"
         (polyline
           (pts
-            (xy 0.254 0)
-            (xy -2.54 0))
+            (xy 0 0)
+            (xy 0.635 0))
           (stroke
             (width 0)
             (type default))
@@ -838,44 +718,8 @@
             (type none)))
         (polyline
           (pts
-            (xy 0.254 1.905)
-            (xy 0.254 -1.905))
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy 0.762 -1.27)
-            (xy 0.762 -2.286))
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy 0.762 0.508)
-            (xy 0.762 -0.508))
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy 0.762 2.286)
-            (xy 0.762 1.27))
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy 2.54 2.54)
-            (xy 2.54 1.778))
+            (xy 0.635 0.635)
+            (xy 2.54 2.54))
           (stroke
             (width 0)
             (type default))
@@ -883,9 +727,9 @@
             (type none)))
         (polyline
           (pts
+            (xy 0.635 -0.635)
             (xy 2.54 -2.54)
-            (xy 2.54 0)
-            (xy 0.762 0))
+            (xy 2.54 -2.54))
           (stroke
             (width 0)
             (type default))
@@ -893,77 +737,39 @@
             (type none)))
         (polyline
           (pts
-            (xy 0.762 -1.778)
-            (xy 3.302 -1.778)
-            (xy 3.302 1.778)
-            (xy 0.762 1.778))
+            (xy 0.635 1.905)
+            (xy 0.635 -1.905)
+            (xy 0.635 -1.905))
           (stroke
-            (width 0)
+            (width 0.508)
             (type default))
           (fill
             (type none)))
         (polyline
           (pts
-            (xy 1.016 0)
-            (xy 2.032 0.381)
-            (xy 2.032 -0.381)
-            (xy 1.016 0))
+            (xy 1.27 -1.778)
+            (xy 1.778 -1.27)
+            (xy 2.286 -2.286)
+            (xy 1.27 -1.778)
+            (xy 1.27 -1.778))
           (stroke
             (width 0)
             (type default))
           (fill
             (type outline)))
-        (polyline
-          (pts
-            (xy 2.794 0.508)
-            (xy 2.921 0.381)
-            (xy 3.683 0.381)
-            (xy 3.81 0.254))
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy 3.302 0.381)
-            (xy 2.921 -0.254)
-            (xy 3.683 -0.254)
-            (xy 3.302 0.381))
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type none)))
         (circle
-          (center 1.651 0)
-          (radius 2.794)
+          (center 1.27 0)
+          (radius 2.8194)
           (stroke
             (width 0.254)
             (type default))
           (fill
-            (type none)))
-        (circle
-          (center 2.54 -1.778)
-          (radius 0.254)
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type outline)))
-        (circle
-          (center 2.54 1.778)
-          (radius 0.254)
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type outline))))
-      (symbol "BS170_1_1"
+            (type none))))
+      (symbol "BC337_1_1"
         (pin passive line
           (at 2.54 5.08 270)
           (length 2.54)
-          (name "D"
+          (name "C"
             (effects
               (font
                 (size 1.27 1.27))))
@@ -973,8 +779,8 @@
                 (size 1.27 1.27)))))
         (pin input line
           (at -5.08 0 0)
-          (length 2.54)
-          (name "G"
+          (length 5.08)
+          (name "B"
             (effects
               (font
                 (size 1.27 1.27))))
@@ -985,7 +791,7 @@
         (pin passive line
           (at 2.54 -5.08 90)
           (length 2.54)
-          (name "S"
+          (name "E"
             (effects
               (font
                 (size 1.27 1.27))))
@@ -1065,28 +871,165 @@
           (number "2"
             (effects
               (font
+                (size 1.27 1.27)))))))
+    (symbol "Transistor_BJT:BC547"
+      (pin_names
+        (offset 0) hide)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.905 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Value" "BC547"
+        (at 5.08 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+        (at 5.08 -1.905 0)
+        (effects
+          (font
+            (size 1.27 1.27) italic)
+          (justify left) hide))
+      (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left) hide))
+      (property "ki_keywords" "NPN Transistor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_description" "0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO?92*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "BC547_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0.635 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.635 0.635)
+            (xy 2.54 2.54))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.635 -0.635)
+            (xy 2.54 -2.54)
+            (xy 2.54 -2.54))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.635 1.905)
+            (xy 0.635 -1.905)
+            (xy 0.635 -1.905))
+          (stroke
+            (width 0.508)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.778)
+            (xy 1.778 -1.27)
+            (xy 2.286 -2.286)
+            (xy 1.27 -1.778)
+            (xy 1.27 -1.778))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type outline)))
+        (circle
+          (center 1.27 0)
+          (radius 2.8194)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "BC547_1_1"
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "C"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin input line
+          (at -5.08 0 0)
+          (length 5.08)
+          (name "B"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "E"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
                 (size 1.27 1.27))))))))
   (symbol
-    (lib_id "Connector:Screw_Terminal_01x02")
+    (lib_id "Connector_Generic:Conn_01x02")
     (at 35.56 39.37 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid c9e7c29d-7974-4e39-a49a-71cdc262c084)
+    (uuid 05270355-05e4-4621-8d23-6fad10b9b233)
     (property "Reference" "J205"
       (at 43.56 34.37 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "Cell power to pocket (+, -)"
+    (property "Value" "Cell power to pocket (+, -) via inline 15A fuse"
       (at 43.56 40.87 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal"
+    (property "Footprint" "cell_bench:PhoenixContact_GMSTBVA_2,5_2-G-7,62_1x02_P7.62mm_Vertical"
       (at 41.56 37.37 0)
       (effects
         (font
@@ -1097,12 +1040,12 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid c33d1ff7-84da-43e9-8209-a22748d52773))
+      (uuid df5e0660-dcc3-4a47-9f86-1d3b3a404f33))
     (pin "2"
-      (uuid 852a0c24-92bf-4f0d-accb-8b7a8abbbe91))
+      (uuid 8e4f1d48-d710-40ad-8610-06aebbba2179))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "J205")
           (unit 1)))))
   (wire
@@ -1112,15 +1055,15 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 148fb338-bd47-497a-afb4-8a3bb73a34ef))
-  (label "CELL_P_RAW"
+    (uuid 70dc8b0a-d861-4651-b888-db890e2c2433))
+  (label "CELL_P"
     (at 27.94 39.37 180)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
       (justify right bottom))
-    (uuid 90a9fc3d-3355-4bec-a5ff-e044bb4305a7))
+    (uuid c3c803da-e2cf-4d87-9382-5cbd6608496d))
   (wire
     (pts
       (xy 30.48 41.91)
@@ -1128,7 +1071,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 24f756ba-ee65-41ab-86ae-32ab1ad1ffa2))
+    (uuid 068ca1e1-5e33-4480-b20a-5c4f173dc16b))
   (label "CELL_N"
     (at 27.94 41.91 180)
     (fields_autoplaced)
@@ -1136,7 +1079,7 @@
       (font
         (size 1.27 1.27))
       (justify right bottom))
-    (uuid 71e2c6cf-cf14-4d37-a2f5-a0a30eafbcbe))
+    (uuid 3ae82ed6-2f75-4eac-b072-f1bf3b7dcd4d))
   (symbol
     (lib_id "Connector_Generic:Conn_01x02")
     (at 96.52 39.37 0)
@@ -1144,7 +1087,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid e2766d2d-32e3-4ff5-bf73-3af8d99f9ea7)
+    (uuid baff57f3-eb09-4538-8259-0a88e24fa569)
     (property "Reference" "J206"
       (at 104.52 34.37 0)
       (effects
@@ -1157,7 +1100,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+    (property "Footprint" "cell_bench:TerminalBlock_bornier-2_P5.08mm"
       (at 102.52 37.37 0)
       (effects
         (font
@@ -1168,12 +1111,12 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 26590a52-7c93-4a34-bd23-95cea505f561))
+      (uuid 1d911e90-ca8e-4713-a043-34b96137db19))
     (pin "2"
-      (uuid 1bea1ba8-8111-4273-b75f-0ba74dc0cbd0))
+      (uuid 986d1637-e716-41c1-9201-1df496b605cc))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "J206")
           (unit 1)))))
   (wire
@@ -1183,7 +1126,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid cf4719e2-e035-4622-a233-ee48ee5e38fb))
+    (uuid c50446ec-3e9a-489d-a372-f2e013df4619))
   (global_label "SENSE_P"
     (shape passive)
     (at 88.9 39.37 180)
@@ -1192,7 +1135,7 @@
       (font
         (size 1.27 1.27))
       (justify right))
-    (uuid 3b3676f8-1ecc-45a1-8801-a7f8ed5a656f)
+    (uuid d46c7204-e243-4f3e-b807-095ed247ed0c)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 88.9 39.37 0)
       (effects
@@ -1205,7 +1148,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid af8775e6-ad03-43ab-9b3f-ebd116151bc9))
+    (uuid b9c08c55-7804-43e7-9b31-85690911a327))
   (global_label "SENSE_N"
     (shape passive)
     (at 88.9 41.91 180)
@@ -1214,33 +1157,33 @@
       (font
         (size 1.27 1.27))
       (justify right))
-    (uuid 55654837-8f0c-4067-90f9-a0c3c64bc2d4)
+    (uuid 5f275d74-5e73-4fc7-bbc0-f4bc80fc026f)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 88.9 41.91 0)
       (effects
         (font
           (size 1.27 1.27)) hide)))
   (symbol
-    (lib_id "Device:Fuse")
+    (lib_id "Device:R_Shunt")
     (at 158.75 39.37 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 58da7cdb-846f-498c-9592-5b5ff25393fe)
-    (property "Reference" "F202"
+    (uuid 80ee1563-0da5-46e7-b0db-b31aaedb31d3)
+    (property "Reference" "R201"
       (at 166.75 34.37 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "15A mini blade (cell)"
+    (property "Value" "10mR 1% 2.5W 2512"
       (at 166.75 40.87 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:Fuseholder_Blade_Mini_Keystone_3568"
+    (property "Footprint" "cell_bench:R_Shunt_2512_Kelvin"
       (at 164.75 37.37 0)
       (effects
         (font
@@ -1250,83 +1193,122 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "Keystone 3568"
-      (at 164.75 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "DigiKey; mini blade fuse holder, 30 A"
-      (at 164.75 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.digikey.com/en/products/detail/keystone-electronics/3568/2137306"
-      (at 164.75 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid d9e86652-eef8-4997-b5ca-790b5c9f46ff))
+      (uuid d6142615-df0a-4094-8c69-85d2e297f9bb))
     (pin "2"
-      (uuid 84f7b9a9-46e3-4dbc-ab70-0f4512a56a8b))
+      (uuid 2e281250-2a97-41b5-a10b-9bf5ee1f0c01))
+    (pin "3"
+      (uuid c6023b06-6c96-460b-9aef-c2c810504202))
+    (pin "4"
+      (uuid 8b25a75d-a825-4c4f-bbba-632c8ee7f2e7))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "F202")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "R201")
           (unit 1)))))
   (wire
     (pts
-      (xy 158.75 35.56)
-      (xy 158.75 33.02))
+      (xy 158.75 34.29)
+      (xy 158.75 31.75))
     (stroke
       (width 0)
       (type default))
-    (uuid 6b29a4b3-303c-46aa-b1e5-8bd0e31997fc))
-  (label "CELL_P_RAW"
-    (at 158.75 33.02 90)
+    (uuid 6e938f9c-d559-478d-8974-17fbcabcb3c1))
+  (label "CELL_N"
+    (at 158.75 31.75 90)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
       (justify left bottom))
-    (uuid 40da35ca-3919-4c08-b539-1a359672479c))
+    (uuid 9b8e7924-393f-4695-89a7-53b1ec2f2905))
   (wire
     (pts
-      (xy 158.75 43.18)
-      (xy 158.75 45.72))
+      (xy 162.56 36.83)
+      (xy 165.1 36.83))
     (stroke
       (width 0)
       (type default))
-    (uuid 532b20f6-65e4-4f98-881f-3ce325dab86d))
-  (label "CELL_P"
-    (at 158.75 45.72 270)
+    (uuid f550993b-46b4-4ff9-bc52-a0fd1fc2974e))
+  (global_label "ISNS_N"
+    (shape passive)
+    (at 165.1 36.83 0)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
-      (justify right bottom))
-    (uuid 46741b00-fb75-49ad-830f-069ea6c3daac))
+      (justify left))
+    (uuid fff931dd-5dd4-4675-8be5-a30b79df135f)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 165.1 36.83 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide)))
+  (wire
+    (pts
+      (xy 162.56 41.91)
+      (xy 165.1 41.91))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8b293192-9089-4949-a2c8-7cb25afe07b5))
+  (global_label "ISNS_G"
+    (shape passive)
+    (at 165.1 41.91 0)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid a2aad066-1108-43b0-9886-e9b88cd11276)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 165.1 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide)))
+  (wire
+    (pts
+      (xy 158.75 44.45)
+      (xy 158.75 46.99))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0627db3f-baf6-458b-9468-58cfa8df4cdf))
+  (global_label "PGND"
+    (shape passive)
+    (at 158.75 46.99 270)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid 4ee11671-467c-4d8b-9f70-24d09e634b2e)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 158.75 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide)))
   (symbol
-    (lib_id "Device:R_Shunt")
+    (lib_id "Jumper:Jumper_2_Bridged")
     (at 220.98 39.37 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 25b69560-d2a3-4885-99d7-9b88701e9221)
-    (property "Reference" "R201"
+    (uuid 45808532-696a-410c-a9fe-eac0d8667030)
+    (property "Reference" "JP201"
       (at 228.98 34.37 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "10mR 1% 2W LVK25"
+    (property "Value" "GND-PGND link (wire)"
       (at 228.98 40.87 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:R_Shunt_Ohmite_LVK25"
+    (property "Footprint" "cell_bench:WireLink_P10.16mm"
       (at 226.98 37.37 0)
       (effects
         (font
@@ -1336,136 +1318,79 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "LVK25R010FER"
-      (at 226.98 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "DigiKey (not found at Ozdisan)"
-      (at 226.98 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.digikey.com/en/products/detail/ohmite/LVK25R010FER/1632761"
-      (at 226.98 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 5daad572-d013-47a7-ab25-76e8a8e85b9f))
+      (uuid 80fe7a83-9035-4abc-98a1-5004921962eb))
     (pin "2"
-      (uuid 03b10c48-1e60-4a2d-b7fa-047755552df3))
-    (pin "3"
-      (uuid 96030c24-a142-4d17-8c86-15d7d316a42f))
-    (pin "4"
-      (uuid 51edfa54-eb0c-4eb9-964c-05dd645fc92c))
+      (uuid 67bd2512-b162-4e56-ab3b-ae379ab4694a))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "R201")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "JP201")
           (unit 1)))))
   (wire
     (pts
-      (xy 220.98 34.29)
-      (xy 220.98 31.75))
+      (xy 215.9 39.37)
+      (xy 213.36 39.37))
     (stroke
       (width 0)
       (type default))
-    (uuid c2e89862-cd15-407f-8ec4-a5b05f884e14))
-  (label "CELL_N"
-    (at 220.98 31.75 90)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left bottom))
-    (uuid 2af00e57-ad40-48cf-aea0-aa8d37a0b221))
-  (wire
-    (pts
-      (xy 224.79 36.83)
-      (xy 227.33 36.83))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid b5fb5698-c95a-418b-ac7d-01f22cb2a642))
-  (global_label "ISNS_N"
+    (uuid 18e036ad-5d9d-4737-af68-3b28a57e4f9a))
+  (global_label "PGND"
     (shape passive)
-    (at 227.33 36.83 0)
+    (at 213.36 39.37 180)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
-      (justify left))
-    (uuid fa25d496-9436-4a1e-997b-9514034fdc70)
+      (justify right))
+    (uuid 91d3df9a-de7f-4f45-8c25-5b65dcc4f991)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 227.33 36.83 0)
+      (at 213.36 39.37 0)
       (effects
         (font
           (size 1.27 1.27)) hide)))
   (wire
     (pts
-      (xy 224.79 41.91)
-      (xy 227.33 41.91))
+      (xy 226.06 39.37)
+      (xy 228.6 39.37))
     (stroke
       (width 0)
       (type default))
-    (uuid a3a08b68-f1f7-4cc6-9ae4-8f011c2da7cc))
-  (global_label "ISNS_G"
-    (shape passive)
-    (at 227.33 41.91 0)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid 9cebbad5-977c-48ff-9bbc-c9d6164e3c1d)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 227.33 41.91 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide)))
-  (wire
-    (pts
-      (xy 220.98 44.45)
-      (xy 220.98 46.99))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 8fd043f5-9d65-4fd0-9cd3-118df6076884))
+    (uuid 33d492fa-c3ba-4ff8-87d1-df3a9e485348))
   (symbol
     (lib_id "power:GND")
-    (at 220.98 46.99 0)
+    (at 228.6 39.37 90)
     (unit 1)
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid cfe961f5-edde-406a-bf30-0a59212a966c)
-    (property "Reference" "#PWR020"
-      (at 220.98 46.99 0)
+    (uuid 50b8d381-f793-44ea-9b4a-16640e94309a)
+    (property "Reference" "#PWR016"
+      (at 228.6 39.37 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Value" "GND"
-      (at 220.98 51.49 0)
+      (at 233.1 39.37 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" ""
-      (at 220.98 46.99 0)
+      (at 228.6 39.37 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" "~"
-      (at 220.98 46.99 0)
+      (at 228.6 39.37 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 5fd3ce6b-5746-497b-bca4-37ab99940b6c))
+      (uuid 499b9858-88d9-40fa-bce0-5dffa4f94632))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR020")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "#PWR016")
           (unit 1)))))
   (symbol
     (lib_id "Relay:Panasonic_ALFG1PF121")
@@ -1474,7 +1399,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 9cf62181-8cf2-47e7-8fc0-c71586a1c569)
+    (uuid 7b8c587e-2671-4969-af83-7ff93b99f2c4)
     (property "Reference" "K1"
       (at 291.21 34.37 0)
       (effects
@@ -1487,7 +1412,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:Relay_SPST_Panasonic_ALFG_FormA"
+    (property "Footprint" "cell_bench:Relay_SPST_Panasonic_ALFG_FormA_CircularHoles"
       (at 289.21 37.37 0)
       (effects
         (font
@@ -1497,32 +1422,17 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "ALFG2PF121"
-      (at 289.21 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan (33 A, 12 V coil)"
-      (at 289.21 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://ozdisan.com/elektromekanik-komponentler/roleler-ve-role-soketleri/genel-tip-roleler/ALFG2PF121/462930"
-      (at 289.21 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "11"
-      (uuid 163db6f6-6ba3-4499-a29d-77b8777b51fe))
+      (uuid 21e2a3ba-dd75-4cfd-a1e1-badb6a5c3ef0))
     (pin "14"
-      (uuid 24143ff3-ae1f-4f1b-a32d-5b0ce552c58b))
+      (uuid 899ede57-df71-4ac0-8053-fc255ca26438))
     (pin "A1"
-      (uuid acc46c02-bd4d-44bd-bbde-8d08244a9ceb))
+      (uuid 25a7fd6d-3d39-4103-8284-8b5cdcd3684e))
     (pin "A2"
-      (uuid 52c750d4-0949-4eca-be81-6114e83793ae))
+      (uuid d701f539-76c6-49fd-8b56-84f88914e967))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "K1")
           (unit 1)))))
   (wire
@@ -1532,7 +1442,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid f501bef5-aea5-4c4b-b70f-19c67d16b345))
+    (uuid 4f0c36ec-0a5c-49c5-bf69-87eb4b2b473d))
   (global_label "CHG_OUT"
     (shape passive)
     (at 288.29 49.53 270)
@@ -1541,7 +1451,7 @@
       (font
         (size 1.27 1.27))
       (justify right))
-    (uuid 25d203c0-88ba-4273-acd5-642f2e4fd2c3)
+    (uuid a6da8812-8936-47ff-b139-2adba1960bc0)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 288.29 49.53 0)
       (effects
@@ -1554,7 +1464,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid bc98d487-5e22-4bd1-896e-13adf5b523aa))
+    (uuid c3da8a40-0d59-4329-bfee-c9e057a22f8a))
   (label "CELL_P"
     (at 290.83 29.21 90)
     (fields_autoplaced)
@@ -1562,7 +1472,7 @@
       (font
         (size 1.27 1.27))
       (justify left bottom))
-    (uuid 87cf1734-ac25-47d5-bf9d-b60408c44f19))
+    (uuid 1d42eb79-94e9-4085-a3c2-33d061c37130))
   (wire
     (pts
       (xy 278.13 31.75)
@@ -1570,7 +1480,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 3ba8ad81-71cd-4200-a3c6-5b53f3aa07ea))
+    (uuid 5ac9d3f2-8f81-459c-9f75-3c0018088c52))
   (global_label "+12V_SW"
     (shape passive)
     (at 278.13 29.21 90)
@@ -1579,7 +1489,7 @@
       (font
         (size 1.27 1.27))
       (justify left))
-    (uuid e6c60c04-d80d-4980-b90e-00df2e301f9f)
+    (uuid 3d270f6e-2c81-4158-8f5e-6a21d7859453)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 278.13 29.21 0)
       (effects
@@ -1592,7 +1502,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 7c482c59-6d30-42a4-ac39-c34b53856772))
+    (uuid a474d1fd-bb66-46e7-a926-39a009e828c9))
   (label "K1_COIL"
     (at 278.13 49.53 270)
     (fields_autoplaced)
@@ -1600,7 +1510,7 @@
       (font
         (size 1.27 1.27))
       (justify right bottom))
-    (uuid 7f9a6709-7f98-450c-ad9c-d2fc0f968389))
+    (uuid b4050b71-e265-42e6-9d48-8d0797ff2c9c))
   (symbol
     (lib_id "Relay:Panasonic_ALFG1PF121")
     (at 345.44 39.37 0)
@@ -1608,7 +1518,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 156d95f1-2c39-495f-8fce-02f48e3a9cf2)
+    (uuid eb19ffe1-45b3-46d9-bcde-235b1196128e)
     (property "Reference" "K2"
       (at 353.44 34.37 0)
       (effects
@@ -1621,7 +1531,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:Relay_SPST_Panasonic_ALFG_FormA"
+    (property "Footprint" "cell_bench:Relay_SPST_Panasonic_ALFG_FormA_CircularHoles"
       (at 351.44 37.37 0)
       (effects
         (font
@@ -1631,32 +1541,17 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "ALFG2PF121"
-      (at 351.44 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan (33 A, 12 V coil)"
-      (at 351.44 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://ozdisan.com/elektromekanik-komponentler/roleler-ve-role-soketleri/genel-tip-roleler/ALFG2PF121/462930"
-      (at 351.44 37.37 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "11"
-      (uuid ab33c2bb-3f13-44ba-9626-4ae2d3c47b39))
+      (uuid 35ec318a-afed-435a-8d18-325aa0b6ae9c))
     (pin "14"
-      (uuid c573c645-5818-47ff-a778-bc0cdb25c8c4))
+      (uuid d0aa7593-61d4-4cb1-919a-f1c193437eba))
     (pin "A1"
-      (uuid 7d392458-220a-446b-8688-b2af8712bd31))
+      (uuid 19519d89-0f1d-4b1d-9589-8713857bb38c))
     (pin "A2"
-      (uuid c48a1af0-4945-45cb-b9aa-25b3598b7ff3))
+      (uuid e7cf8727-1a8d-4683-a7e7-5da008557475))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "K2")
           (unit 1)))))
   (wire
@@ -1666,7 +1561,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid cdc6d804-76f8-4344-bce8-7a086ccc3be5))
+    (uuid 78c0f063-c425-409c-b90a-6c933b4912ab))
   (label "CELL_P"
     (at 350.52 49.53 270)
     (fields_autoplaced)
@@ -1674,7 +1569,7 @@
       (font
         (size 1.27 1.27))
       (justify right bottom))
-    (uuid 82a245b2-61cb-42df-bb7b-c42d5f071a34))
+    (uuid 07cb2993-948c-4109-a210-0c0bb2e13237))
   (wire
     (pts
       (xy 353.06 31.75)
@@ -1682,7 +1577,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 945ba940-3e7a-48b5-a6ba-026b560ed05e))
+    (uuid ff3ff384-e89e-4920-9eb3-9d868f7f2213))
   (global_label "LOAD_P"
     (shape passive)
     (at 353.06 29.21 90)
@@ -1691,7 +1586,7 @@
       (font
         (size 1.27 1.27))
       (justify left))
-    (uuid 7b037822-e949-42ac-97eb-9951f3e1c035)
+    (uuid 389ca4c0-761b-4ddb-a5f7-268de8b0e727)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 353.06 29.21 0)
       (effects
@@ -1704,7 +1599,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 5f4c2833-d7d8-4663-94ad-706c86d5ed35))
+    (uuid 6abd982d-3e50-4d74-90e1-6b7eeb628352))
   (global_label "+12V_SW"
     (shape passive)
     (at 340.36 29.21 90)
@@ -1713,7 +1608,7 @@
       (font
         (size 1.27 1.27))
       (justify left))
-    (uuid 0867692a-57ca-450a-b3f7-6eae25387375)
+    (uuid e84a47d9-efd5-4b31-8192-57dedacbfe50)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 340.36 29.21 0)
       (effects
@@ -1726,7 +1621,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 02673d2e-6ec4-4114-a86e-686d574da9ca))
+    (uuid 898a469d-c8be-4895-b566-3a140049246c))
   (label "K2_COIL"
     (at 340.36 49.53 270)
     (fields_autoplaced)
@@ -1734,22 +1629,22 @@
       (font
         (size 1.27 1.27))
       (justify right bottom))
-    (uuid 6e197aa8-3454-4d10-b6ce-57b69c8d4a08))
+    (uuid 40e72a7e-13ef-40e2-83e0-db0368a3b204))
   (symbol
-    (lib_id "Device:D")
+    (lib_id "Device:D_Schottky")
     (at 35.56 73.66 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 24b01f6b-54a4-4df4-9607-14e846b52380)
+    (uuid 01132f63-5a8b-4a8f-bedf-16c34e7921f8)
     (property "Reference" "D201"
       (at 43.56 68.66 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "1N4007"
+    (property "Value" "1N5819"
       (at 43.56 75.16 0)
       (effects
         (font
@@ -1765,28 +1660,13 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "1N4007-E3/54"
-      (at 41.56 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan"
-      (at 41.56 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.ozdisan.com/en/p/rectifier-diodes-389/vishay-1n4007-e3-54-339764"
-      (at 41.56 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 4cc18e74-28c0-4006-9fa8-16ffe25d477a))
+      (uuid cd153c0d-65dc-4a44-930c-a287c18462af))
     (pin "2"
-      (uuid 3f0a3a0e-0b84-48d0-be45-81f8c8fc4628))
+      (uuid ae4b97ab-6c14-4cfe-906f-08f84ba005e1))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "D201")
           (unit 1)))))
   (wire
@@ -1796,7 +1676,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 145ebfb3-430f-4e06-85de-5bd182107123))
+    (uuid 2296d01a-afa6-4bdb-b861-956f6d15f1c8))
   (global_label "+12V_SW"
     (shape passive)
     (at 29.21 73.66 180)
@@ -1805,7 +1685,7 @@
       (font
         (size 1.27 1.27))
       (justify right))
-    (uuid cabd54b3-e69c-4955-a321-f03266fb7ee0)
+    (uuid bc829c96-cf6f-4ad3-a377-7fdbd4eb7c45)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 29.21 73.66 0)
       (effects
@@ -1818,7 +1698,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid baabd063-45b5-4e5b-bef9-f9f81d659ec7))
+    (uuid 2eab2777-b695-4762-be52-8525d4bffac6))
   (label "K1_COIL"
     (at 41.91 73.66 0)
     (fields_autoplaced)
@@ -1826,22 +1706,22 @@
       (font
         (size 1.27 1.27))
       (justify left bottom))
-    (uuid c18d8c93-3891-40c3-82d5-f8cc18a1e345))
+    (uuid dc99b61f-3cc2-400e-88e4-4d076fb3fa7f))
   (symbol
-    (lib_id "Device:D")
+    (lib_id "Device:D_Schottky")
     (at 96.52 73.66 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 5f48b730-41e4-4b61-9cc3-44578411c266)
+    (uuid 11aeda3a-2623-4f73-b679-4dea8477857e)
     (property "Reference" "D202"
       (at 104.52 68.66 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "1N4007"
+    (property "Value" "1N5819"
       (at 104.52 75.16 0)
       (effects
         (font
@@ -1857,28 +1737,13 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "1N4007-E3/54"
-      (at 102.52 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan"
-      (at 102.52 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.ozdisan.com/en/p/rectifier-diodes-389/vishay-1n4007-e3-54-339764"
-      (at 102.52 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid c0380c6f-8ae8-4495-8589-c0f2db2639b0))
+      (uuid 83fe38bb-79a3-40cb-b0b4-aa298ed7f19b))
     (pin "2"
-      (uuid ca98a9c5-effb-4121-b5de-f9a1d436d680))
+      (uuid 3ed07ac6-46f6-4df9-ac33-5bfd2e1ffdec))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "D202")
           (unit 1)))))
   (wire
@@ -1888,7 +1753,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 648335fa-c20d-4da9-8a8b-f150d065d5c2))
+    (uuid 2c74842d-55d0-480e-8c4f-31831ee6b49f))
   (global_label "+12V_SW"
     (shape passive)
     (at 90.17 73.66 180)
@@ -1897,7 +1762,7 @@
       (font
         (size 1.27 1.27))
       (justify right))
-    (uuid 9cb187f6-7d64-4dbe-9f05-4fd3ffab3e65)
+    (uuid c1847faf-427a-4e8e-a267-2a37debd87e7)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 90.17 73.66 0)
       (effects
@@ -1910,7 +1775,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid a8c5b327-6562-426a-bc6f-1cd47e9033a5))
+    (uuid c5341f52-0a9f-4fe1-99f2-d87b115c5348))
   (label "K2_COIL"
     (at 102.87 73.66 0)
     (fields_autoplaced)
@@ -1918,22 +1783,22 @@
       (font
         (size 1.27 1.27))
       (justify left bottom))
-    (uuid 336efa14-80b9-4103-9843-56893d4d1b1d))
+    (uuid bb3d4147-5346-48f0-8c26-ec052c523290))
   (symbol
-    (lib_id "Transistor_FET:BS170")
+    (lib_id "Transistor_BJT:BC337")
     (at 158.75 73.66 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid edd01c6b-e425-48c9-8cb0-ff15e5c2870f)
+    (uuid 3a388b92-f992-45a7-8e73-e7ee0597b438)
     (property "Reference" "Q201"
       (at 166.75 68.66 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "BS170"
+    (property "Value" "BC337"
       (at 166.75 75.16 0)
       (effects
         (font
@@ -1949,30 +1814,15 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "BS170"
-      (at 164.75 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan"
-      (at 164.75 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.ozdisan.com/en/p/discrete-mosfets-435/ons-fairchild-bs170-12618"
-      (at 164.75 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 5a1ce1fa-1f38-4a70-b887-496e540c99ea))
+      (uuid 653f67b8-d66c-4005-b48a-ef522d40586f))
     (pin "2"
-      (uuid 34af4cb6-5625-4af8-ae29-3f4be579bd79))
+      (uuid 71987b22-ac7d-44f3-bc2a-b9b504f9eadc))
     (pin "3"
-      (uuid b38e244d-0441-44e5-b891-37a3bf9a91a0))
+      (uuid b8eb6f20-f5e9-44bd-96a4-95c00267bdce))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "Q201")
           (unit 1)))))
   (wire
@@ -1982,7 +1832,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 66e086cb-fcff-4ca1-9b3a-43e013b5fb16))
+    (uuid 39240d5a-d6e5-4985-b5d5-4df379d4f39e))
   (label "K1_COIL"
     (at 161.29 66.04 90)
     (fields_autoplaced)
@@ -1990,7 +1840,7 @@
       (font
         (size 1.27 1.27))
       (justify left bottom))
-    (uuid 8afd3340-4128-4ac3-95aa-af43eb29d247))
+    (uuid a457a864-f601-46e0-8de7-b2da88d89ad7))
   (wire
     (pts
       (xy 153.67 73.66)
@@ -1998,15 +1848,15 @@
     (stroke
       (width 0)
       (type default))
-    (uuid f8862b37-2603-48c0-9916-4641f8f22d4a))
-  (label "K1_G"
+    (uuid eaa5e3d4-2319-4faa-b70f-dc3e4f950875))
+  (label "K1_B"
     (at 151.13 73.66 180)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
       (justify right bottom))
-    (uuid f483c0ae-7202-4ca4-81d5-4d7192d5e1b3))
+    (uuid 21f351f5-d7cc-4caf-883d-657966344859))
   (wire
     (pts
       (xy 161.29 78.74)
@@ -2014,7 +1864,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 81b46228-9f41-4ae8-8ea8-3e3d1ba830a4))
+    (uuid d03ea14a-92eb-4aaa-928e-6543fb330d25))
   (symbol
     (lib_id "power:GND")
     (at 161.29 81.28 0)
@@ -2022,8 +1872,8 @@
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid 83ea858f-b1b1-493c-acd8-c6b69622a91e)
-    (property "Reference" "#PWR021"
+    (uuid 66549d67-2931-441c-b757-eac83609c8e7)
+    (property "Reference" "#PWR017"
       (at 161.29 81.28 0)
       (effects
         (font
@@ -2044,27 +1894,27 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 64a0dbd3-265e-4f88-a007-708c7221f188))
+      (uuid ac2514c4-59b4-4009-b718-18df9304e210))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR021")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "#PWR017")
           (unit 1)))))
   (symbol
-    (lib_id "Transistor_FET:BS170")
+    (lib_id "Transistor_BJT:BC337")
     (at 220.98 73.66 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid d41d026e-01d9-44cd-b025-13209e1830d4)
+    (uuid a8eff185-e7ee-4325-987e-0afcea1b5cb4)
     (property "Reference" "Q202"
       (at 228.98 68.66 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "BS170"
+    (property "Value" "BC337"
       (at 228.98 75.16 0)
       (effects
         (font
@@ -2080,30 +1930,15 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "BS170"
-      (at 226.98 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan"
-      (at 226.98 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.ozdisan.com/en/p/discrete-mosfets-435/ons-fairchild-bs170-12618"
-      (at 226.98 71.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 1eb59c63-d2b9-4387-b4ae-f81016f83304))
+      (uuid 4bc89875-8627-4008-844b-1d9e377fcbd1))
     (pin "2"
-      (uuid 0afdbdb5-fca1-4567-af56-983736a3acb9))
+      (uuid 7e52bd7b-ae91-4f67-9e02-8c5bd1f5dd36))
     (pin "3"
-      (uuid 9abedd41-de4a-44fa-9998-8d12beed7cf1))
+      (uuid 4f413f6f-a147-418c-a48e-c26bb172467c))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "Q202")
           (unit 1)))))
   (wire
@@ -2113,7 +1948,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 06438eeb-6fdf-48ae-a4f5-04fb7c7de5da))
+    (uuid e7ac686b-f666-4329-9288-740f7b1166cc))
   (label "K2_COIL"
     (at 223.52 66.04 90)
     (fields_autoplaced)
@@ -2121,7 +1956,7 @@
       (font
         (size 1.27 1.27))
       (justify left bottom))
-    (uuid 08bd40ca-e828-4cff-ae81-d41c820a64fc))
+    (uuid 61d51a88-1d76-498f-aed0-24bc5d53ed90))
   (wire
     (pts
       (xy 215.9 73.66)
@@ -2129,15 +1964,15 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 941195e7-ab9c-417e-ae8e-610678ef7e80))
-  (label "K2_G"
+    (uuid dffce09a-bbcd-45da-b41c-17c19911dbb5))
+  (label "K2_B"
     (at 213.36 73.66 180)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
       (justify right bottom))
-    (uuid 85b85ad8-72cf-4c8d-a3fa-bdca620da110))
+    (uuid dfdeb83c-ee64-4e8f-8e38-6903d1396dd7))
   (wire
     (pts
       (xy 223.52 78.74)
@@ -2145,7 +1980,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 6a98e524-a225-4f57-a572-11e3cb74d7fe))
+    (uuid 1e83c0a0-f479-43db-9f25-8c3037b49064))
   (symbol
     (lib_id "power:GND")
     (at 223.52 81.28 0)
@@ -2153,8 +1988,8 @@
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid 1131de44-5345-4723-950b-fd6899d71b2d)
-    (property "Reference" "#PWR022"
+    (uuid f6d83053-50d7-45e2-82a1-096535b976db)
+    (property "Reference" "#PWR018"
       (at 223.52 81.28 0)
       (effects
         (font
@@ -2175,11 +2010,11 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 1e2ba7ac-6aa8-4698-83d2-fc0e7bfe736e))
+      (uuid 34957fad-65fa-457e-8424-e09b0c282bcc))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR022")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "#PWR018")
           (unit 1)))))
   (symbol
     (lib_id "Device:R")
@@ -2188,7 +2023,7 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 143b53cf-4868-4d8b-9269-2b91cb99185b)
+    (uuid af520bfa-e4c6-4890-990b-1d029a51420f)
     (property "Reference" "R202"
       (at 291.21 68.66 0)
       (effects
@@ -2201,7 +2036,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:R_1206_3216Metric"
+    (property "Footprint" "cell_bench:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
       (at 289.21 71.66 0)
       (effects
         (font
@@ -2212,12 +2047,12 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid bbd82d01-3b9e-45cf-8028-fa3a9e0570ae))
+      (uuid 3996727c-3c43-428f-91b0-72cbd02988df))
     (pin "2"
-      (uuid a869cd3d-34ad-49c8-bb7d-d25227a3f7c8))
+      (uuid cce20409-62e2-4c05-a836-b8c117f055a1))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "R202")
           (unit 1)))))
   (wire
@@ -2227,7 +2062,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 4a72fadd-4ef1-4bac-bd99-5827d15ac0b0))
+    (uuid 14000557-1865-48f0-9d18-2f5450411fa9))
   (global_label "K1_EN"
     (shape passive)
     (at 283.21 67.31 90)
@@ -2236,7 +2071,7 @@
       (font
         (size 1.27 1.27))
       (justify left))
-    (uuid 8eb1b214-cc6a-4a86-9e9f-33f137bac702)
+    (uuid 3fa74434-e434-4433-b080-638c8b15121c)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 283.21 67.31 0)
       (effects
@@ -2249,15 +2084,15 @@
     (stroke
       (width 0)
       (type default))
-    (uuid e0049c2b-4bc2-43e3-a937-3715cff68c2e))
-  (label "K1_G"
+    (uuid e094f60c-9666-4756-9f1d-01ef34291c72))
+  (label "K1_B"
     (at 283.21 80.01 270)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
       (justify right bottom))
-    (uuid 4f6aa5ca-f49f-448d-8a1b-914d236c0020))
+    (uuid 3d4a69a5-1356-4fd1-88c6-840904be3f82))
   (symbol
     (lib_id "Device:R")
     (at 345.44 73.66 0)
@@ -2265,20 +2100,20 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 30eb4ea7-bb94-496a-a80e-49d9c1899c5c)
+    (uuid 3fe1279c-8831-412f-8d56-a59909af212c)
     (property "Reference" "R203"
       (at 353.44 68.66 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "100k"
+    (property "Value" "10k"
       (at 353.44 75.16 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:R_1206_3216Metric"
+    (property "Footprint" "cell_bench:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
       (at 351.44 71.66 0)
       (effects
         (font
@@ -2289,12 +2124,12 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 0c4feb68-3a62-4dff-adc1-e634c4034a9c))
+      (uuid a12961bd-a4c9-4d7b-afcc-a4eb86b54c5b))
     (pin "2"
-      (uuid a413fc1e-70e9-4a12-8f86-6a2b592b8ee4))
+      (uuid 0b07d039-73c0-49da-9678-f3d81ba4ff58))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "R203")
           (unit 1)))))
   (wire
@@ -2304,15 +2139,21 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 9586d79d-cdd3-4dc2-8626-a8977f6b492f))
-  (label "K1_G"
+    (uuid 9b7fafb8-bade-4efb-9ac7-87075967889b))
+  (global_label "K1_EN"
+    (shape passive)
     (at 345.44 67.31 90)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
-      (justify left bottom))
-    (uuid de1a5f44-6f8e-4f12-a538-315a256f650d))
+      (justify left))
+    (uuid 2b8f11ec-4d9c-4c86-aba0-493b267cc6c8)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 345.44 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide)))
   (wire
     (pts
       (xy 345.44 77.47)
@@ -2320,7 +2161,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid c6ee767c-ad2e-4940-9d0f-96b69a5b9ede))
+    (uuid 7637b926-3b21-4139-babd-3f0797f7c83d))
   (symbol
     (lib_id "power:GND")
     (at 345.44 80.01 0)
@@ -2328,8 +2169,8 @@
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid 35dc7fe0-3904-49a4-9024-e619ea205d40)
-    (property "Reference" "#PWR023"
+    (uuid 7ab2c127-1b25-4236-98a4-b0429d8f5765)
+    (property "Reference" "#PWR019"
       (at 345.44 80.01 0)
       (effects
         (font
@@ -2350,11 +2191,11 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 08242c66-8f4f-4020-8e80-9f2556378581))
+      (uuid 4f77c823-78ba-4ddc-af2b-befd3eb54af1))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR023")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "#PWR019")
           (unit 1)))))
   (symbol
     (lib_id "Device:R")
@@ -2363,20 +2204,20 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid d947214e-f9eb-4208-9f1f-a2ca8299b079)
+    (uuid 8703cba7-adfe-4056-8221-e892e42d7f2e)
     (property "Reference" "R204"
       (at 43.56 102.95 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "100k"
+    (property "Value" "10k"
       (at 43.56 109.45 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:R_1206_3216Metric"
+    (property "Footprint" "cell_bench:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
       (at 41.56 105.95 0)
       (effects
         (font
@@ -2387,12 +2228,12 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid cacb80ec-9614-4b51-9b26-2afd308732bc))
+      (uuid aed2c778-1733-4f38-90fe-455df5973fc2))
     (pin "2"
-      (uuid 180b21af-4d19-4e9f-868b-fb6b58dc32a2))
+      (uuid 377a97f7-375a-485d-b700-fa45fb2583ca))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "R204")
           (unit 1)))))
   (wire
@@ -2402,8 +2243,8 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 690c7874-9075-4c74-b538-c342f77fdc06))
-  (global_label "K1_EN"
+    (uuid 39176e7e-41a2-4461-b970-e8310a9e5c21))
+  (global_label "K2_EN"
     (shape passive)
     (at 35.56 101.6 90)
     (fields_autoplaced)
@@ -2411,7 +2252,7 @@
       (font
         (size 1.27 1.27))
       (justify left))
-    (uuid 2c762627-9799-42f6-a970-7ed16f298c41)
+    (uuid 79ceaf19-c7f0-4c90-965d-cbd6193ea9e1)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 35.56 101.6 0)
       (effects
@@ -2424,119 +2265,131 @@
     (stroke
       (width 0)
       (type default))
-    (uuid fa04f5c6-fc01-4276-86f4-142a9ffef1fc))
-  (symbol
-    (lib_id "power:GND")
-    (at 35.56 114.3 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid 6635b06b-79cc-4643-85d7-1e2816016f6c)
-    (property "Reference" "#PWR024"
-      (at 35.56 114.3 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Value" "GND"
-      (at 35.56 118.8 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at 35.56 114.3 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" "~"
-      (at 35.56 114.3 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid 01a8e75c-3d72-45d1-bc04-e70b3a1b89fc))
-    (instances
-      (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR024")
-          (unit 1)))))
-  (symbol
-    (lib_id "Device:R")
-    (at 96.52 107.95 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid 0c47fa9f-b0ee-4ac1-8073-58d848360a49)
-    (property "Reference" "R205"
-      (at 104.52 102.95 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "1k"
-      (at 104.52 109.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "cell_bench:R_1206_3216Metric"
-      (at 102.52 105.95 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" "~"
-      (at 102.52 105.95 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid 731a35b8-266f-48a4-848c-629356c0fb18))
-    (pin "2"
-      (uuid 87cc8010-6432-4769-aa4b-f4cad10b1ca7))
-    (instances
-      (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "R205")
-          (unit 1)))))
-  (wire
-    (pts
-      (xy 96.52 104.14)
-      (xy 96.52 101.6))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 2d30256a-a46d-4295-b2ee-86b14bd65bc3))
-  (global_label "K2_EN"
-    (shape passive)
-    (at 96.52 101.6 90)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid d36ef23e-699a-4ded-b368-6bce81ecb312)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 96.52 101.6 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide)))
-  (wire
-    (pts
-      (xy 96.52 111.76)
-      (xy 96.52 114.3))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid dded4157-a095-463b-909e-0320ed01427e))
-  (label "K2_G"
-    (at 96.52 114.3 270)
+    (uuid 91787b18-3c02-4fe4-8e2b-890c673b748e))
+  (label "K1_IB"
+    (at 35.56 114.3 270)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
       (justify right bottom))
-    (uuid 9aa2b9f7-51bc-45ef-8bd6-32e76208ee2a))
+    (uuid 3c1d43d6-c006-4751-966e-960267d39274))
+  (symbol
+    (lib_id "Transistor_BJT:BC547")
+    (at 96.52 107.95 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 73fc6e9d-715e-4897-afd6-e88fe8d7f5d3)
+    (property "Reference" "Q203"
+      (at 104.52 102.95 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "BC547"
+      (at 104.52 109.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "cell_bench:TO-92_Inline_Wide"
+      (at 102.52 105.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" "~"
+      (at 102.52 105.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid da55d117-2c2a-4785-811b-7e217f761e4c))
+    (pin "2"
+      (uuid a48ebf9c-0caf-4ea7-864a-fd1bafa8bb00))
+    (pin "3"
+      (uuid abad729a-aaee-47ba-9acb-2011871adf37))
+    (instances
+      (project "cell_test_bench"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "Q203")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 99.06 102.87)
+      (xy 99.06 100.33))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 654d0c54-73a1-4c92-8c13-6e1c988de635))
+  (label "K1_B"
+    (at 99.06 100.33 90)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left bottom))
+    (uuid bb870ac8-d9f1-4f43-9d79-d97ca088463d))
+  (wire
+    (pts
+      (xy 91.44 107.95)
+      (xy 88.9 107.95))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b0861531-45ba-40cb-85b6-7baa1321c85d))
+  (label "K1_IB"
+    (at 88.9 107.95 180)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right bottom))
+    (uuid b4f64a70-996c-4a39-a959-c618bc7fe076))
+  (wire
+    (pts
+      (xy 99.06 113.03)
+      (xy 99.06 115.57))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid fb5e5999-9248-429b-95d3-251bbe9b4d6f))
+  (symbol
+    (lib_id "power:GND")
+    (at 99.06 115.57 0)
+    (unit 1)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid 0517c568-6460-48f3-99c7-2336149261a4)
+    (property "Reference" "#PWR020"
+      (at 99.06 115.57 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Value" "GND"
+      (at 99.06 120.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 99.06 115.57 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" "~"
+      (at 99.06 115.57 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid 58aa7c3a-78e4-42c7-bb86-1d0e4662935e))
+    (instances
+      (project "cell_test_bench"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "#PWR020")
+          (unit 1)))))
   (symbol
     (lib_id "Device:R")
     (at 158.75 107.95 0)
@@ -2544,20 +2397,20 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 92451f48-55ca-41f3-b509-da4ca05aca9e)
-    (property "Reference" "R206"
+    (uuid 44f07550-d09c-4355-9928-e5b4f755ab47)
+    (property "Reference" "R205"
       (at 166.75 102.95 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "100k"
+    (property "Value" "1k"
       (at 166.75 109.45 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:R_1206_3216Metric"
+    (property "Footprint" "cell_bench:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
       (at 164.75 105.95 0)
       (effects
         (font
@@ -2568,13 +2421,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 45b3ccee-c949-4a07-a6df-2295d104b977))
+      (uuid 26768b4d-b056-4036-b0b6-eff86a9d5b47))
     (pin "2"
-      (uuid b36a9ace-396a-4173-ad9e-0ce15e30c779))
+      (uuid d3ee854a-1237-4c0d-8b96-0e2daf6199c4))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "R206")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "R205")
           (unit 1)))))
   (wire
     (pts
@@ -2583,15 +2436,21 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 11dc0a3b-4662-48e4-8332-2f01db3211c0))
-  (label "K2_G"
+    (uuid ffee5c38-2944-4cb8-94a6-84811d60203a))
+  (global_label "K2_EN"
+    (shape passive)
     (at 158.75 101.6 90)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
-      (justify left bottom))
-    (uuid 88529068-42e4-4906-a389-fae8553f83b4))
+      (justify left))
+    (uuid 719ec7d6-2dda-482d-bff9-cead5594158b)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at 158.75 101.6 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide)))
   (wire
     (pts
       (xy 158.75 111.76)
@@ -2599,42 +2458,15 @@
     (stroke
       (width 0)
       (type default))
-    (uuid f6d0347a-6ae0-4de2-a26c-6f92a8b4ff54))
-  (symbol
-    (lib_id "power:GND")
-    (at 158.75 114.3 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid 30b04acb-a59f-4e7d-8f80-8e44e5867103)
-    (property "Reference" "#PWR025"
-      (at 158.75 114.3 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Value" "GND"
-      (at 158.75 118.8 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at 158.75 114.3 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" "~"
-      (at 158.75 114.3 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid 9e047b3f-ba86-4386-8243-a06b13dbb1f5))
-    (instances
-      (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR025")
-          (unit 1)))))
+    (uuid c56345c5-d1dc-4f5a-9393-535de80adfcd))
+  (label "K2_B"
+    (at 158.75 114.3 270)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right bottom))
+    (uuid a729d5b7-9da7-4ae0-a6e6-9bb3f3dcc515))
   (symbol
     (lib_id "Device:R")
     (at 220.98 107.95 0)
@@ -2642,20 +2474,20 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid ab50cdcf-433c-440c-82eb-cf7fe1f5565a)
-    (property "Reference" "R207"
+    (uuid 39e07494-2094-4e80-b684-7ed1945aebfa)
+    (property "Reference" "R206"
       (at 228.98 102.95 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "100k"
+    (property "Value" "10k"
       (at 228.98 109.45 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:R_1206_3216Metric"
+    (property "Footprint" "cell_bench:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
       (at 226.98 105.95 0)
       (effects
         (font
@@ -2666,13 +2498,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 30c571ec-12d6-4ed3-a5e0-68e683bfe080))
+      (uuid 9e6b67c0-69b0-466a-8e84-b7d874ab49f2))
     (pin "2"
-      (uuid 0812b3af-4a86-4740-af57-ca4878dd6632))
+      (uuid 32704b6c-67e6-4843-aa47-3172909f205c))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "R207")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "R206")
           (unit 1)))))
   (wire
     (pts
@@ -2681,7 +2513,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid df2104b2-2fd2-4b70-91d2-f1d130d2e860))
+    (uuid 679aafb0-bff6-4f0a-8a0a-2a922846a3a9))
   (global_label "K2_EN"
     (shape passive)
     (at 220.98 101.6 90)
@@ -2690,7 +2522,7 @@
       (font
         (size 1.27 1.27))
       (justify left))
-    (uuid 788bc1b6-6638-46d1-be96-3dd418b74e5c)
+    (uuid 38be03cd-3696-4962-a0d5-8be6110e57fe)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 220.98 101.6 0)
       (effects
@@ -2703,7 +2535,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 96c1796a-0a25-4270-8ce3-6a40bddb9418))
+    (uuid 0369db11-6590-453f-9300-1b2a7cd9d583))
   (symbol
     (lib_id "power:GND")
     (at 220.98 114.3 0)
@@ -2711,8 +2543,8 @@
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid afbd6562-f8b4-4864-a9b5-83a76e860ba6)
-    (property "Reference" "#PWR026"
+    (uuid 3ee5d8b7-a8c7-40e3-8065-ab30d5f94532)
+    (property "Reference" "#PWR021"
       (at 220.98 114.3 0)
       (effects
         (font
@@ -2733,33 +2565,33 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 42f7a161-2d3b-478f-8934-621cde01aad1))
+      (uuid 08b41705-c28b-491d-b026-b94c88a86118))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR026")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "#PWR021")
           (unit 1)))))
   (symbol
-    (lib_id "Transistor_FET:BS170")
+    (lib_id "Device:R")
     (at 283.21 107.95 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 7ac1ea52-424c-449b-bb05-5756d39682ee)
-    (property "Reference" "Q203"
+    (uuid 823aab44-878b-43de-936b-f16d4ff1c4cd)
+    (property "Reference" "R207"
       (at 291.21 102.95 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "BS170"
+    (property "Value" "10k"
       (at 291.21 109.45 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "cell_bench:TO-92_Inline_Wide"
+    (property "Footprint" "cell_bench:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
       (at 289.21 105.95 0)
       (effects
         (font
@@ -2769,128 +2601,68 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "BS170"
-      (at 289.21 105.95 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan"
-      (at 289.21 105.95 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.ozdisan.com/en/p/discrete-mosfets-435/ons-fairchild-bs170-12618"
-      (at 289.21 105.95 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid eb043bca-d1b1-499d-935a-95051fe5aeb7))
+      (uuid 0393fa7e-ca1c-4c4f-9108-5282e613d638))
     (pin "2"
-      (uuid 7c800e47-e637-4b36-84df-8ab53cf9243d))
-    (pin "3"
-      (uuid 21fe6271-6066-409b-bc71-729b02bae7b8))
+      (uuid 789c415c-8ed3-4434-81eb-6e003a74a9ef))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "Q203")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "R207")
           (unit 1)))))
   (wire
     (pts
-      (xy 285.75 102.87)
-      (xy 285.75 100.33))
+      (xy 283.21 104.14)
+      (xy 283.21 101.6))
     (stroke
       (width 0)
       (type default))
-    (uuid 4c23368d-2d98-4a4c-bb20-1323a38a43f6))
-  (label "K1_G"
-    (at 285.75 100.33 90)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left bottom))
-    (uuid 10d63622-765c-419d-8879-4b2e09a3daf6))
-  (wire
-    (pts
-      (xy 278.13 107.95)
-      (xy 275.59 107.95))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 22ce4194-e54f-4e7a-a8c8-a17d2d23291e))
-  (global_label "K2_EN"
+    (uuid d48aa2cc-6c6d-4ca1-8cb4-b4e3dd0e52c7))
+  (global_label "K1_EN"
     (shape passive)
-    (at 275.59 107.95 180)
+    (at 283.21 101.6 90)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
-      (justify right))
-    (uuid 96d883cc-4a6e-44eb-9b94-811b87b678c9)
+      (justify left))
+    (uuid db99888a-d97a-4112-89fb-51bcfda9a98c)
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 275.59 107.95 0)
+      (at 283.21 101.6 0)
       (effects
         (font
           (size 1.27 1.27)) hide)))
   (wire
     (pts
-      (xy 285.75 113.03)
-      (xy 285.75 115.57))
+      (xy 283.21 111.76)
+      (xy 283.21 114.3))
     (stroke
       (width 0)
       (type default))
-    (uuid 1febb18a-a6c0-4d1f-abb2-b95b29278bff))
+    (uuid 7dc76de7-4076-424e-9eb4-68da16f27f1e))
+  (label "K2_IB"
+    (at 283.21 114.3 270)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right bottom))
+    (uuid 8f9cc233-fc69-4ef5-96be-4016f35a7b2f))
   (symbol
-    (lib_id "power:GND")
-    (at 285.75 115.57 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid b6dbd4b9-701b-4223-a906-ddbd8cc07880)
-    (property "Reference" "#PWR027"
-      (at 285.75 115.57 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Value" "GND"
-      (at 285.75 120.07 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at 285.75 115.57 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" "~"
-      (at 285.75 115.57 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid c02c4ac3-dc60-4809-9a44-0fcc6e7d664e))
-    (instances
-      (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR027")
-          (unit 1)))))
-  (symbol
-    (lib_id "Transistor_FET:BS170")
+    (lib_id "Transistor_BJT:BC547")
     (at 345.44 107.95 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid 434960ce-a005-4d55-aa6f-f39ef2b97d85)
+    (uuid cb27b4fb-86e8-492f-948c-a598a0a9642d)
     (property "Reference" "Q204"
       (at 353.44 102.95 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Value" "BS170"
+    (property "Value" "BC547"
       (at 353.44 109.45 0)
       (effects
         (font
@@ -2906,30 +2678,15 @@
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "BS170"
-      (at 351.44 105.95 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan"
-      (at 351.44 105.95 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.ozdisan.com/en/p/discrete-mosfets-435/ons-fairchild-bs170-12618"
-      (at 351.44 105.95 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 1d79cc71-def5-4bda-9869-5bd843bf709c))
+      (uuid 1fb199b7-8e20-45ee-a854-d5f9c76d153b))
     (pin "2"
-      (uuid 6f8e45c9-8b6c-439a-832c-f3ac34c659fb))
+      (uuid 3c8f9dad-150d-4b8b-822d-329fadf8ee56))
     (pin "3"
-      (uuid 60685bf6-38ff-4dd8-b8e9-c59f60399ee6))
+      (uuid a5deced3-d326-4679-8522-6890d6a03c71))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
           (reference "Q204")
           (unit 1)))))
   (wire
@@ -2939,15 +2696,15 @@
     (stroke
       (width 0)
       (type default))
-    (uuid bb66ec98-8be0-4ec2-9ff7-37a87e80807c))
-  (label "K2_G"
+    (uuid 681f2104-98e6-408e-a648-421bd82b8d3c))
+  (label "K2_B"
     (at 347.98 100.33 90)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
       (justify left bottom))
-    (uuid c662c47f-d6b6-4db9-a49f-6e96f8262cd0))
+    (uuid 171ed04a-570a-43b7-b33f-212371cbffb5))
   (wire
     (pts
       (xy 340.36 107.95)
@@ -2955,21 +2712,15 @@
     (stroke
       (width 0)
       (type default))
-    (uuid fa49f851-162f-42ab-a894-08093378239c))
-  (global_label "K1_EN"
-    (shape passive)
+    (uuid e334fd9e-1680-4a6a-9dd3-926618bca8fc))
+  (label "K2_IB"
     (at 337.82 107.95 180)
     (fields_autoplaced)
     (effects
       (font
         (size 1.27 1.27))
-      (justify right))
-    (uuid 0253c1a8-6a09-4137-9e0c-91f7a7b11995)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 337.82 107.95 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide)))
+      (justify right bottom))
+    (uuid 85df3ac3-608b-4b46-8424-49680b14678e))
   (wire
     (pts
       (xy 347.98 113.03)
@@ -2977,7 +2728,7 @@
     (stroke
       (width 0)
       (type default))
-    (uuid 6f2d5e7d-c6f2-48f2-bc31-6803790adf9e))
+    (uuid ff4b9e28-56c5-4b30-8fb5-5f665e928cf7))
   (symbol
     (lib_id "power:GND")
     (at 347.98 115.57 0)
@@ -2985,8 +2736,8 @@
     (in_bom no)
     (on_board no)
     (dnp no)
-    (uuid 697ed6b2-bf6e-4fa6-97a4-10f1e1eac2e5)
-    (property "Reference" "#PWR028"
+    (uuid b4621f03-4024-4897-8dc6-677433444d10)
+    (property "Reference" "#PWR022"
       (at 347.98 115.57 0)
       (effects
         (font
@@ -3007,346 +2758,58 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid 8320bc32-f0e8-4ea9-8d0d-0555e21d4655))
+      (uuid f9c05b0b-8a2b-4642-a887-048f9f74ef6d))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR028")
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33/d60f94b2-f662-40bd-8b3c-d6ef6709fc8f"
+          (reference "#PWR022")
           (unit 1)))))
-  (symbol
-    (lib_id "Transistor_FET:BS170")
-    (at 35.56 142.24 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid 5651b137-badd-42f0-aa74-e506103da9e2)
-    (property "Reference" "Q205"
-      (at 43.56 137.24 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "BS170"
-      (at 43.56 143.74 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "cell_bench:TO-92_Inline_Wide"
-      (at 41.56 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" "~"
-      (at 41.56 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "BS170"
-      (at 41.56 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan"
-      (at 41.56 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.ozdisan.com/en/p/discrete-mosfets-435/ons-fairchild-bs170-12618"
-      (at 41.56 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid 124b6a99-176a-494a-8b6f-cbacbc5bf99b))
-    (pin "2"
-      (uuid e9fd4953-c99c-43cd-8e55-af12389c7201))
-    (pin "3"
-      (uuid 4bf83460-5d34-4029-944b-3f987b60ec31))
-    (instances
-      (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "Q205")
-          (unit 1)))))
-  (wire
-    (pts
-      (xy 38.1 137.16)
-      (xy 38.1 134.62))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 968bd706-911f-4d52-93ac-541d4d4b67b2))
-  (label "K1_G"
-    (at 38.1 134.62 90)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left bottom))
-    (uuid 616e6ac0-b7b8-4ed4-bbb8-81d006164b84))
-  (wire
-    (pts
-      (xy 30.48 142.24)
-      (xy 27.94 142.24))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 9f4f8719-6ae9-4eff-a4c4-90387173a4d4))
-  (global_label "FAULT"
-    (shape passive)
-    (at 27.94 142.24 180)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right))
-    (uuid 55ef3317-6067-42e6-9239-96fd72c7ace6)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 27.94 142.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide)))
-  (wire
-    (pts
-      (xy 38.1 147.32)
-      (xy 38.1 149.86))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 0dbd7420-4a5c-4ab3-abd2-c45afa50bae6))
-  (symbol
-    (lib_id "power:GND")
-    (at 38.1 149.86 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid 09d936e5-4a70-4814-88d0-79406ef918a7)
-    (property "Reference" "#PWR029"
-      (at 38.1 149.86 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Value" "GND"
-      (at 38.1 154.36 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at 38.1 149.86 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" "~"
-      (at 38.1 149.86 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid 5b69cacd-3aab-4066-a108-660a8d66bf28))
-    (instances
-      (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR029")
-          (unit 1)))))
-  (symbol
-    (lib_id "Transistor_FET:BS170")
-    (at 96.52 142.24 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid 427d436b-751d-4363-8534-4ee6f21b9395)
-    (property "Reference" "Q206"
-      (at 104.52 137.24 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "BS170"
-      (at 104.52 143.74 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "cell_bench:TO-92_Inline_Wide"
-      (at 102.52 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" "~"
-      (at 102.52 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "BS170"
-      (at 102.52 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier" "Ozdisan"
-      (at 102.52 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Supplier link" "https://www.ozdisan.com/en/p/discrete-mosfets-435/ons-fairchild-bs170-12618"
-      (at 102.52 140.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid 0abc081b-2008-48fe-b443-e41bb8d3c25f))
-    (pin "2"
-      (uuid e6d8ee32-be48-4301-b626-8be00f143a38))
-    (pin "3"
-      (uuid 5a71fc61-83f2-41bd-a0c9-b3eb3ac244c5))
-    (instances
-      (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "Q206")
-          (unit 1)))))
-  (wire
-    (pts
-      (xy 99.06 137.16)
-      (xy 99.06 134.62))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 3d09c20b-84a3-4b17-b9cd-0d91acfab084))
-  (label "K2_G"
-    (at 99.06 134.62 90)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left bottom))
-    (uuid 5b015a88-b1c0-40aa-b94f-3a79b363064e))
-  (wire
-    (pts
-      (xy 91.44 142.24)
-      (xy 88.9 142.24))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid be39093f-1acd-4566-9d7f-894da7543d2b))
-  (global_label "FAULT"
-    (shape passive)
-    (at 88.9 142.24 180)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right))
-    (uuid 64aaca4b-ee1e-440b-b18c-8632aa0dbc4d)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at 88.9 142.24 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide)))
-  (wire
-    (pts
-      (xy 99.06 147.32)
-      (xy 99.06 149.86))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid 54da1c9d-806f-48d4-9961-ef5698ebe51c))
-  (symbol
-    (lib_id "power:GND")
-    (at 99.06 149.86 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp no)
-    (uuid eb463377-3124-4e6d-afc8-cd3c5cbb191a)
-    (property "Reference" "#PWR030"
-      (at 99.06 149.86 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Value" "GND"
-      (at 99.06 154.36 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at 99.06 149.86 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" "~"
-      (at 99.06 149.86 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid 61e0f63b-0530-4bf6-8dca-04429d910b99))
-    (instances
-      (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2/02040192-ced7-4385-89e1-29754c8d0505"
-          (reference "#PWR030")
-          (unit 1)))))
-  (text "Single 10 mOhm 4-terminal shunt R201 (Ohmite LVK25, 2 W) sits in the cell negative lead, so it measures BOTH charge and discharge current. System GND = shunt ground side (star point)."
-    (at 25 178.0 0)
+  (text "Cell + lead: put a 15 A blade fuse in an inline holder close to the cell (off-board)."
+    (at 25 144.0 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 8594f831-7235-4402-b9d3-5e92a144c284))
-  (text "Kelvin sense: ISNS_N / ISNS_G from the shunt sense pads, SENSE_P / SENSE_N from separate wires at the cell tabs (J206)."
-    (at 25 182.5 0)
+    (uuid dcee6588-eb4b-4956-8d2a-8afda705804a))
+  (text "R201: 10 mOhm 2512 shunt (Isabellenhuette CMS, 2.5 W) in the cell negative lead, so it measures BOTH charge and discharge. Pads 2/3 are Kelvin taps at the inner pad edges."
+    (at 25 148.5 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 90e51090-e3ad-4cb0-8b5c-d8250d2e1e09))
-  (text "K1 (charger) and K2 (load): Panasonic ALFG2PF121 PCB power relays, 12 V coil, 33 A, normally open."
-    (at 25 187.0 0)
+    (uuid f60185a5-9a0b-4fb6-9df7-a2c511c4abfa))
+  (text "JP201 is the single GND-PGND link (a wire link next to the shunt). Do not add another ground connection between the two nets."
+    (at 25 153.0 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid d5cc23b7-940c-450c-9bd8-55702e706d4b))
-  (text "Interlock: Q203 holds K1 off while K2_EN is high, Q204 holds K2 off while K1_EN is high (both commanded = both off). Q205/Q206 drop both relays on FAULT."
-    (at 25 191.5 0)
+    (uuid f4b67c04-3b9e-4688-ac78-11d44bc380cd))
+  (text "K1 (charger) and K2 (load): Panasonic ALFG2PF121, 12 V coil, 33 A, normally open. Coils run from +12V_SW, so any fault opens both."
+    (at 25 157.5 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 2ad1c161-2dda-4bcd-838b-9b1c0e953bd3))
-  (text "R204/R207 pull-downs keep both relays off while the MCU boots. Q201/Q202: BS170 (TO-92) coil drivers, coil ~150 mA."
-    (at 25 196.0 0)
+    (uuid 1e7ddacd-bfd0-4ebe-b14e-9f4e2c27773e))
+  (text "Interlock: Q203 holds K1 off while K2_EN is high and Q204 holds K2 off while K1_EN is high (both commanded = both off)."
+    (at 25 162.0 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 7efc7124-1739-4ab0-a131-498cdbc64694))  (text "v0.3 REVIEW NOTES - explained in docs/SCHEMATIC_GUIDE.md section 2; checklist with comment columns in docs/SCHEMATIC_REVIEW.md"
-    (at 25 205.0 0)
-    (effects
-      (font
-        (size 1.5 1.5) bold)
-      (justify left top))
-    (uuid e2f3f8d8-ccf2-4571-98f6-410c0dd95926))
-  (text "How it works: R201 (10 mOhm, pins 1/4 = current, 2/3 = Kelvin sense) is in the cell negative lead, so it sees charge AND discharge."
-    (at 25 210.0 0)
+    (uuid 3e156585-3683-4e7c-9d31-347692c4304f))
+  (text "Coil drivers Q201/Q202 are BC337 (bipolar) so a 3.3 V GPIO switches them fully. R203/R206 keep the relays off while the MCU boots."
+    (at 25 166.5 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 48b06f4d-6436-44db-b415-1256c38fa5bf))
-  (text "GND is defined at R201 pin 4. Discharge: ISNS_N negative vs ISNS_G. Charge: ISNS_N positive. Relay coils 117 mA, 1.4 W (ALFG2PF121)."
-    (at 25 214.5 0)
+    (uuid 9a86f24c-89ad-407a-8974-4c7d4bd254ec))
+  (text "How it works / what to check: docs/SCHEMATIC_GUIDE.md section 2."
+    (at 25 171.0 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 2c8b0b33-573c-4dc4-a30d-be59cd8cc995))
-  (text "CHECK R-02: BS170 at 3.3 V gate for 117 mA.  R-04: LVK25 pin numbering vs Ohmite drawing.  F-01: coil pads are 0.5 mm slots (not CNC-drillable)."
-    (at 25 219.0 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left top))
-    (uuid ea5dcf6b-5dfc-4e7c-bfdf-92d272e275fb))
-)
+    (uuid e2d1f163-d577-46b0-97be-16d19e8db144)))

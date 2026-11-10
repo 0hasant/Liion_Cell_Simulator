@@ -1,5 +1,7 @@
 # Quilter notes: what it can and can't do for this board
 
+> **Historical (v0.3).** From v0.4 the board is single-sided, which Quilter can't make, so the layout is placed and routed in-house by `hardware/tools/pcbgen.py` and `route2.py`. The `hardware/quilter_input/` folder was removed. These notes stay for reference if a 2-layer version is ever needed.
+
 Quilter (app.quilter.ai) does placement and routing for the cell test bench PCB. Claude's role is the controller: prepare the input, set the constraints, review the candidates against `docs/LAYOUT_REVIEW.md`, ask for revisions, and pick the candidate to keep.
 
 Last updated: 2026-10-28

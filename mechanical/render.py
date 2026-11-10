@@ -90,9 +90,9 @@ if __name__ == '__main__':
     items = meshes(asm)
     draw(items, os.path.join(OUT, 'assembly_exploded.png'), 28, -60, 'Cell test bench: electronics box + thermal unit (lids lifted)')
     draw(items, os.path.join(OUT, 'electronics_box.png'), 55, -70, 'Electronics box (lid removed)',
-         only=('E1_', 'PCB', 'load_', 'series_R', 'XL4016', 'MP1584', 'E3_'))
+         only=('E1_', 'PCB', 'load_', 'series_R', 'XL4016', 'E3_', 'E4_', 'KSD9700'))
     draw(items, os.path.join(OUT, 'thermal_unit.png'), 30, -50, 'Thermal unit: cell pocket (21700 shown), Peltiers, heatsink',
-         only=('T1_', 'T2_', 'T4_', 'T5_', 'T7_', 'cell_', 'cold_plate', 'TEC1', 'hot_side', 'BTS7960', 'thermal_pad'))
+         only=('T1_', 'T2_', 'T4_', 'T5_', 'T7_', 'cell_', 'cold_plate', 'TEC1', 'hot_side', 'thermal_pad'))
     draw(items, os.path.join(OUT, 'thermal_pocket_detail.png'), 50, -35, 'Pocket interior: contact blocks, saddle, 21700 cell',
          only=('T4_', 'T5_', 'T7_', 'cell_', 'cold_plate', 'thermal_pad', 'TEC1'))
     print('renders done')

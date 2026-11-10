@@ -6,6 +6,7 @@ import libs
 
 PROJECT = 'cell_test_bench'
 POWER_NETS = {'GND': 'power:GND', '+12V': 'power:+12V', '+5V': 'power:+5V', '+3V3': 'power:+3V3'}
+REV, DATE = '0.4', '2026-11-10'
 STUB = 2.54
 U = lambda: str(uuid.uuid4())
 
@@ -108,7 +109,7 @@ def power(D, s, net, pt, d):
     libid = POWER_NETS[net]
     D.pwr_n += 1
     # choose rotation so the symbol body points along d (GND body points down by default, others up)
-    default = (0, 1) if net == 'GND' else (0, -1)
+    default = (0, 1) if net in ('GND', 'PGND') else (0, -1)
     rots = {0: default}
     for r in (0, 90, 180, 270):
         v = xf(0, 0, r, default[0], -default[1])
@@ -150,7 +151,7 @@ def text(s, txt, x, y, size=1.5):
 # ---------------------------------------------------------------- output
 def sheet_file(D, s, paper='A3'):
     out = ['kicad_sch', ['version', 20230121], ['generator', 'eeschema'], ['uuid', s.uuid], ['paper', Q(paper)],
-           ['title_block', ['title', Q(s.title)], ['date', Q('2026-10-13')], ['rev', Q('0.1 draft')],
+           ['title_block', ['title', Q(s.title)], ['date', Q(DATE)], ['rev', Q(REV)],
             ['company', Q('Solaris - cell test bench')]],
            ['lib_symbols'] + list(s.used_libs.values())]
     out += s.items

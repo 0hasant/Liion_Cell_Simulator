@@ -1,11 +1,12 @@
 """Cell test bench - enclosure and thermal cell pocket (CadQuery).
 
-Two printable units, both under 220 x 220 mm:
-  * Electronics box (E): main PCB, load MOSFET heatsink + 60 mm fan, two XL4016
-    modules (stacked), MP1584. 214 x 214 x 89 mm.
-  * Thermal unit (T): hot-side heatsink + 60 mm fan, 2x TEC1-12706, aluminium cold
-    plate, insulated cell pocket with swappable saddles for 18650 / 21700,
-    sliding contact block, BTS7960 driver. 130 x 130 mm footprint.
+Two printable units, both under 220 x 220 mm (v0.4):
+  * Electronics box (E): main PCB, load MOSFET + 0.1 Ohm resistor on an 80 x 80 x 54 mm
+    CPU cooler standing on its side, two XL4016 modules (stacked). 214 x 214 x 89 mm.
+  * Thermal unit (T): 80 x 80 x 54 mm CPU cooler (hot side, fan down), 2x TEC1-12706,
+    aluminium cold plate, insulated cell pocket with swappable saddles for 18650 / 21700,
+    sliding contact block. 130 x 130 mm footprint. The Peltiers are driven from the main
+    board (no driver in this unit any more).
 
 Run:  python3 enclosure.py           -> stl/*.stl, step/*.step, renders/*.png
       python3 enclosure.py --no-pcb  -> skip the (slow) KiCad board STEP import
@@ -30,18 +31,24 @@ STANDOFF_H = 8.0
 PCB_HOLES = [(4, 4), (176, 68), (4, 126), (176, 126)]
 INSERT_D = 4.2                      # M3 heat-set insert hole
 M3 = 3.4
-# load heatsink (aluminium extrusion) + fan
-HS_E = dict(x0=82.0, y0=30.0, w=100.0, d=40.0, h=70.0)
-FAN60 = 60.0
+# CPU cooler (Motorobit "80x80x54mm sogutuculu fan"): 80 x 80 base, 54 mm incl. 15 mm fan
+COOLER = (80.0, 80.0, 54.0)
+COOLER_FAN_T = 15.0
+# load cooler stands on its side: flat base against the PCB front edge (Q301 tab), fan facing
+# the front wall. Q301 body centre is at PCB x = 113.45, i.e. inner x = PCB_X0 + 113.45.
+Q301_X = PCB_X0 + 113.45
+HS_E = dict(x0=Q301_X - COOLER[0] / 2, y0=PCB_Y0 - COOLER[2], w=COOLER[0], d=COOLER[2], h=COOLER[1])
+FAN80 = 80.0
+FAN80_HOLES = 71.5
 # modules
-XL4016 = (65.0, 47.0, 25.0)
-MP1584 = (22.0, 17.0, 5.0)
-BTS7960 = (50.0, 50.0, 43.0)
+XL4016 = (65.0, 47.0, 25.0)         # envelope; the 8 A module sold in Turkiye is 60 x 37 mm
+RH50 = (50.0, 15.0, 28.0)
+MOD_PLATE_XY = (0.5, 12.0)         # module plate corner, inner coords (clear of the corner boss and the cradle)           # 0.1 Ohm 50 W aluminium resistor incl. flanges (X, Y, Z when mounted)
 # thermal unit
 T_OUT = (130.0, 130.0)
-T_BASE_H = 60.0
-HS_T = (100.0, 60.0, 25.0)          # hot-side heatsink (fins down)
+T_POST = 12.0                       # cooler fan frame stands on 4 posts above the floor intake
 TEC = (40.0, 40.0, 3.8)
+T_BASE_H = FLOOR + T_POST + COOLER[2] + TEC[2]    # TEC tops = base top = cold plate bottom
 PLATE = (100.0, 50.0, 6.0)          # aluminium cold plate (flat bar)
 PAD = 1.0                           # thermal pad under the cell
 POCKET_WALL = 14.0
@@ -75,38 +82,37 @@ def ebox_base():
         boss = cq.Workplane('XY').rect(10, 10).extrude(E_H - FLOOR).translate((cx, cy, FLOOR))
         b = b.union(boss)
         b = b.cut(cq.Workplane('XY').circle(INSERT_D / 2).extrude(12).translate((cx, cy, E_H - 12)))
-    # front wall: 60 mm fan grille in front of the load heatsink
+    # front wall: 80 mm fan grille in front of the load cooler (its fan faces the wall)
     fx = WALL + HS_E['x0'] + HS_E['w'] / 2
-    fz = FLOOR + 6 + FAN60 / 2
-    grille = cq.Workplane('XZ').workplane(offset=0).center(fx, fz)
-    for i in range(-2, 3):
-        for j in range(-2, 3):
-            if i * i + j * j <= 5:
+    fz = FLOOR + CRADLE_FLOOR + COOLER[1] / 2
+    for i in range(-3, 4):
+        for j in range(-3, 4):
+            if i * i + j * j <= 10:
                 b = b.cut(cq.Workplane('XZ').center(fx + i * 10, fz + j * 10).rect(7, 7).extrude(-WALL - 1).translate((0, -0.5, 0)))
-    for sx in (-25, 25):
-        for sz in (-25, 25):
-            b = b.cut(cq.Workplane('XZ').center(fx + sx, fz + sz).circle(M3 / 2).extrude(-WALL - 1).translate((0, -0.5, 0)))
-    # left wall: two 4 mm binding posts (PSU in) next to J101
-    py = WALL + PCB_Y0 + (PCB_H - 14)
+    # left wall: two 4 mm binding posts (PSU in) next to J101 (PCB y = 35)
+    py = WALL + PCB_Y0 + (PCB_H - 35)
     for dy in (-9.5, 9.5):
         b = b.cut(cq.Workplane('YZ').center(py + dy, FLOOR + 40).circle(4.2).extrude(WALL + 1).translate((-0.5, 0, 0)))
     # back wall: USB opening for the Blue Pill (PCB x = 166)
     ux = WALL + PCB_X0 + 166
     usb_z = FLOOR + STANDOFF_H + PCB_T + 11.0
     b = b.cut(box(13, WALL + 2, 9, ux - 6.5, oy - WALL - 1, usb_z - 4.5))
-    # right wall: two cable grommets to the thermal unit (cell power + sense, Peltier/fans/NTC)
-    for gy in (WALL + 45, WALL + 175):
-        b = b.cut(cq.Workplane('YZ').center(gy, FLOOR + 30).circle(8).extrude(WALL + 2).translate((ox - WALL - 1, 0, 0)))
-    # exhaust slots on both side walls above the heatsink zone
-    for k in range(8):
-        y = WALL + HS_E['y0'] - 20 + k * 8
+    # right wall: two Ø16 grommets to the thermal unit.
+    #   GROMMET_CELL: cell power 2 x 1.5 mm2 + Kelvin pair (high, behind the cooler, short path)
+    #   GROMMET_AUX:  Peltier 2 x 0.75 mm2, fan wires, three NTC pairs (near J702 / J70x / J50x)
+    for gy, gz in (GROMMET_CELL, GROMMET_AUX):
+        b = b.cut(cq.Workplane('YZ').center(WALL + gy, FLOOR + gz).circle(8).extrude(WALL + 2).translate((ox - WALL - 1, 0, 0)))
+    # exhaust slots on both side walls level with the cooler fins
+    for k in range(6):
+        y = WALL + HS_E['y0'] + 4 + k * 8
         for x0 in (-0.5, ox - WALL - 0.5):
-            b = b.cut(box(WALL + 1, 4, 30, x0, y, E_H - 40))
-    # floor locating ribs for the load heatsink
-    for x in (HS_E['x0'] - 3, HS_E['x0'] + HS_E['w']):
-        b = b.union(box(3, HS_E['d'], 6, WALL + x, WALL + HS_E['y0'], FLOOR))
-    # insert holes for the module plate (XL4016 stack) and MP1584
-    for (x, y) in [(8, 8), (68, 8), (8, 50), (68, 50)]:
+            b = b.cut(box(WALL + 1, 4, 40, x0, y, FLOOR + 25))
+    # inserts for the cooler cradle (E4)
+    for (x, y) in cradle_holes():
+        b = b.union(cq.Workplane('XY').circle(4).extrude(4).translate((WALL + x, WALL + y, FLOOR)))
+        b = b.cut(cq.Workplane('XY').circle(INSERT_D / 2).extrude(5).translate((WALL + x, WALL + y, FLOOR + 0.5)))
+    # insert holes for the module plate (XL4016 stack)
+    for (x, y) in [(MOD_PLATE_XY[0] + px, MOD_PLATE_XY[1] + py) for (px, py) in [(5, 5), (65, 5), (5, 47), (65, 47)]]:
         b = b.union(cq.Workplane('XY').circle(4).extrude(4).translate((WALL + x, WALL + y, FLOOR)))
         b = b.cut(cq.Workplane('XY').circle(INSERT_D / 2).extrude(5).translate((WALL + x, WALL + y, FLOOR + 0.5)))
     # rubber feet recesses
@@ -127,10 +133,14 @@ def ebox_lid():
         lid = lid.cut(box(13, 13, 4, cx - 6.5, cy - 6.5, -4))
         lid = lid.cut(cq.Workplane('XY').circle(M3 / 2).extrude(t).translate((cx, cy, 0)))
         lid = lid.cut(cq.Workplane('XY').circle(3.2).extrude(1.8).translate((cx, cy, t - 1.8)))
-    # vents above the load heatsink
-    for k in range(9):
-        x = WALL + HS_E['x0'] + 6 + k * 10
-        lid = lid.cut(box(5, HS_E['d'] - 6, t + 1, x, WALL + HS_E['y0'] + 3, -0.5))
+    # vents above the load cooler
+    for k in range(7):
+        x = WALL + HS_E['x0'] + 7 + k * 10.5
+        lid = lid.cut(box(5, HS_E['d'] - 10, t + 1, x, WALL + HS_E['y0'] + 5, -0.5))
+    # two ribs that stop the cooler from lifting (0.5 mm above its top)
+    rib_h = E_H - (FLOOR + CRADLE_FLOOR + COOLER[1]) - 0.5
+    for x in (HS_E['x0'] + 3, HS_E['x0'] + HS_E['w'] - 7):
+        lid = lid.union(box(4, HS_E['d'] - 8, rib_h, WALL + x, WALL + HS_E['y0'] + 4, -rib_h))
     # label
     lid = lid.cut(cq.Workplane('XY').workplane(offset=t - 0.6).center(ox / 2, oy / 2 + 30)
                   .text('Li-ion Cell Test Bench', 9, 0.6, kind='bold', halign='center', valign='center'))
@@ -148,58 +158,91 @@ def module_plate():
     return p
 
 
-def heatsink_clamp():
-    c = box(16, 40, 30).cut(box(16, 34, 27, 0, 3, 3))
-    c = c.union(box(26, 40, 3, -5, 0, 0))
-    for y in (8, 32):
-        c = c.cut(cq.Workplane('XY').circle(M3 / 2).extrude(3).translate((-1, y, 0)))
+CRADLE_FLOOR = 2.0       # cradle floor thickness under the cooler
+CRADLE_WALL = 4.0
+CRADLE_H = 14.0
+GROMMET_CELL = (95.0, 50.0)          # (inner y, z above floor)
+GROMMET_AUX = (175.0, 30.0)
+
+
+def cradle_holes():
+    x0, y0 = HS_E['x0'] - CRADLE_WALL - 5, HS_E['y0'] + 8
+    x1, y1 = HS_E['x0'] + HS_E['w'] + CRADLE_WALL + 5, HS_E['y0'] + HS_E['d'] - 8
+    return [(x0, y0), (x1, y0), (x0, y1), (x1, y1)]
+
+
+def cooler_cradle():
+    """Holds the load cooler standing on its side (80 x 80 face vertical). The cooler drops
+    in from the top; the lid ribs stop it lifting, the Q301 screw holds it to the board edge."""
+    w, d = HS_E['w'] + 2 * CRADLE_WALL, HS_E['d']
+    c = box(w, d, CRADLE_H).cut(box(HS_E['w'] + 0.6, d, CRADLE_H, CRADLE_WALL - 0.3, 0, CRADLE_FLOOR))
+    # fins must breathe downwards too: slots in the floor
+    for k in range(7):
+        c = c.cut(box(6, d - 12, CRADLE_FLOOR + 1, CRADLE_WALL + 5 + k * 10.5, 6, -0.5))
+    # screw tabs
+    for (x, y) in cradle_holes():
+        lx, ly = x - (HS_E['x0'] - CRADLE_WALL), y - HS_E['y0']
+        tab = cq.Workplane('XY').circle(5).extrude(3).translate((lx, ly, 0))
+        edge = 0.0 if lx < 0 else w
+        c = c.union(tab).union(box(abs(lx - edge), 10, 3, min(lx, edge), ly - 5, 0))
+        c = c.cut(cq.Workplane('XY').circle(M3 / 2).extrude(3).translate((lx, ly, 0)))
     return c
 
 
 # ============================================================== thermal unit
 def t_base():
+    """Bottom of the thermal unit: floor intake grille, four posts carrying the hot-side
+    cooler (fan down), four bosses for the cold-plate clamp screws, wiring chamber at the back."""
     ox, oy = T_OUT
     b = box(ox, oy, T_BASE_H).edges('|Z').fillet(4)
     b = b.cut(box(ox - 2 * WALL, oy - 2 * WALL, T_BASE_H, WALL, WALL, FLOOR))
-    # heatsink zone: centred in X, at the front in Y
-    hx0 = (ox - HS_T[0]) / 2
-    hy0 = 12.0
-    ledge_z = T_BASE_H - 0.0 - HS_T[2] - TEC[2]   # heatsink top + TECs end at the base top
-    # ledges the heatsink rests on (left / right ends)
-    for x in (hx0 - 4, hx0 + HS_T[0] - 6):
-        b = b.union(box(10, HS_T[1], ledge_z - FLOOR, x, hy0, FLOOR))
-    # floor intake grille under the 60 mm fan
-    fx, fy = ox / 2, hy0 + HS_T[1] / 2
-    for i in range(-2, 3):
-        for j in range(-2, 3):
-            if i * i + j * j <= 5:
+    hx0 = (ox - COOLER[0]) / 2
+    hy0 = 10.0
+    # posts under the fan frame corners
+    for (x, y) in [(4, 4), (COOLER[0] - 4, 4), (4, COOLER[1] - 4), (COOLER[0] - 4, COOLER[1] - 4)]:
+        b = b.union(cq.Workplane('XY').circle(3.5).extrude(T_POST).translate((hx0 + x, hy0 + y, FLOOR)))
+    # floor intake grille under the 80 mm fan
+    fx, fy = hx0 + COOLER[0] / 2, hy0 + COOLER[1] / 2
+    for i in range(-3, 4):
+        for j in range(-3, 4):
+            if i * i + j * j <= 10:
                 b = b.cut(box(7, 7, FLOOR + 1, fx + i * 10 - 3.5, fy + j * 10 - 3.5, -0.5))
-    for sx in (-25, 25):
-        for sy in (-25, 25):
-            b = b.cut(cq.Workplane('XY').circle(M3 / 2).extrude(FLOOR + 1).translate((fx + sx, fy + sy, -0.5)))
     # feet so the fan can breathe
     for cx, cy in [(10, 10), (ox - 10, 10), (10, oy - 10), (ox - 10, oy - 10)]:
         b = b.union(cq.Workplane('XY').circle(6).extrude(8).translate((cx, cy, -8)))
-    # side exhaust slots at fin height
-    for k in range(10):
-        x = hx0 + 5 + k * 9.5
-        b = b.cut(box(4, WALL + 1, 18, x, -0.5, ledge_z - 2))
-    # BTS7960 standoffs behind the heatsink
-    for (x, y) in [(40, 78), (80, 78), (40, 118), (80, 118)]:
-        b = b.union(cq.Workplane('XY').circle(4).extrude(5).translate((x, y, FLOOR)))
-        b = b.cut(cq.Workplane('XY').circle(INSERT_D / 2).extrude(5).translate((x, y, FLOOR + 1)))
-    # cable grommet (to the electronics box)
-    b = b.cut(cq.Workplane('YZ').center(oy - 30, 30).circle(8).extrude(WALL + 2).translate((-1, 0, 0)))
+    # exhaust slots at fin height on the front and both side walls
+    fin_z0 = FLOOR + T_POST + COOLER_FAN_T
+    for k in range(8):
+        x = hx0 + 3 + k * 10
+        b = b.cut(box(4, WALL + 1, 30, x, -0.5, fin_z0))
+    for k in range(7):
+        y = hy0 + 4 + k * 10
+        for x0 in (-0.5, ox - WALL - 0.5):
+            b = b.cut(box(WALL + 1, 4, 30, x0, y, fin_z0))
+    # cold plate: 100 x 50, centred on the cooler. Four bosses under its corner holes
+    # (countersunk M3 from the top pull the plate onto the TECs and the cooler onto the posts)
+    px0, py0 = fx - PLATE[0] / 2, fy - PLATE[1] / 2
+    for x in (3.5, PLATE[0] - 3.5):
+        for y in (6, PLATE[1] - 6):
+            bx, by = px0 + x, py0 + y
+            b = b.union(cq.Workplane('XY').circle(4).extrude(T_BASE_H - FLOOR).translate((bx, by, FLOOR)))
+            b = b.cut(cq.Workplane('XY').circle(INSERT_D / 2).extrude(10).translate((bx, by, T_BASE_H - 10)))
+    # wiring chamber at the back: two inserts for a 3-way screw terminal (Peltier series link)
+    for x in (ox / 2 - 10, ox / 2 + 10):
+        b = b.union(cq.Workplane('XY').circle(4).extrude(5).translate((x, oy - 18, FLOOR)))
+        b = b.cut(cq.Workplane('XY').circle(INSERT_D / 2).extrude(5).translate((x, oy - 18, FLOOR + 1)))
+    # cable grommet (to the electronics box): Peltier, hot-side fan, NTC hot side
+    b = b.cut(cq.Workplane('YZ').center(oy - 20, 35).circle(8).extrude(WALL + 2).translate((-1, 0, 0)))
     # insert holes for the pocket body on the top rim
     for cx, cy in [(8, 8), (ox - 8, 8), (8, oy - 8), (ox - 8, oy - 8)]:
         b = b.union(box(12, 12, T_BASE_H - FLOOR, cx - 6, cy - 6, FLOOR).edges('|Z').fillet(2))
         b = b.cut(cq.Workplane('XY').circle(INSERT_D / 2).extrude(10).translate((cx, cy, T_BASE_H - 10)))
-    return b, (hx0, hy0, ledge_z)
+    return b, (hx0, hy0, (px0, py0))
 
 
 def pocket_body(plate_xy):
     """Insulated cell pocket: sits on the base rim, the cold plate is its floor.
-    The rear part is a vented cover over the BTS7960 driver."""
+    The rear part is a vented cover over the wiring chamber."""
     ox, oy = T_OUT
     px0, py0 = plate_xy
     cav_x0, cav_y0 = px0 - 1, py0 - 1
@@ -208,7 +251,7 @@ def pocket_body(plate_xy):
     h = PLATE[2] + POCKET_H
     b = box(ox, body_d, h, 0, by0, 0).edges('|Z').fillet(4)
     b = b.cut(box(cav_w, cav_d, h, cav_x0, cav_y0, 0))
-    # rear chamber over the BTS7960 (open bottom, 3 mm roof with vents)
+    # rear chamber over the wiring chamber (open bottom, 3 mm roof with vents)
     rear_y0 = cav_y0 + cav_d + POCKET_WALL
     b = b.cut(box(ox - 2 * WALL, oy - WALL - rear_y0, h - 3, WALL, rear_y0, 0))
     for k in range(9):
@@ -291,11 +334,23 @@ def saddle(cell):
 
 
 def cold_plate():
+    """6 mm aluminium bar. Corner holes: 3.4 mm with a 90 deg countersink for M3 flat-head screws."""
     p = box(*PLATE)
     for x in (3.5, PLATE[0] - 3.5):
         for y in (6, PLATE[1] - 6):
             p = p.cut(cq.Workplane('XY').circle(M3 / 2).extrude(PLATE[2]).translate((x, y, 0)))
+            p = p.cut(cq.Solid.makeCone(0, 3.3, 3.3, cq.Vector(x, y, PLATE[2] - 3.3)))
     return p
+
+
+def cpu_cooler():
+    """80 x 80 x 54 cooler envelope, base at z = 54 (top), fins below, 15 mm fan at the bottom."""
+    w, d, h = COOLER
+    c = box(w, d, 6, 0, 0, h - 6)
+    for i in range(13):
+        c = c.union(box(1.5, d, h - 6 - COOLER_FAN_T, i * (w - 1.5) / 12, 0, COOLER_FAN_T))
+    c = c.union(fan(FAN80, COOLER_FAN_T))
+    return c
 
 
 # ============================================================== purchased-part placeholders
@@ -331,10 +386,9 @@ def build(with_pcb=True):
     parts['E1_ebox_base'] = ebox_base()
     parts['E2_ebox_lid'] = ebox_lid()
     parts['E3_module_plate'] = module_plate()
-    parts['E4_heatsink_clamp'] = heatsink_clamp()
-    tb, (hx0, hy0, ledge_z) = t_base()
+    parts['E4_cooler_cradle'] = cooler_cradle()
+    tb, (hx0, hy0, plate_xy) = t_base()
     parts['T1_thermal_base'] = tb
-    plate_xy = (hx0, hy0 + (HS_T[1] - PLATE[1]) / 2)
     pb, geom = pocket_body(plate_xy)
     parts['T2_pocket_body'] = pb
     parts['T3_pocket_lid'] = pocket_lid(geom)
@@ -360,39 +414,44 @@ def build(with_pcb=True):
         asm.add(board, name='PCB', loc=L(WALL + PCB_X0, WALL + PCB_Y0 + PCB_H, pcb_z))
     else:
         asm.add(box(PCB_W, PCB_H, PCB_T), name='PCB', color=green, loc=L(WALL + PCB_X0, WALL + PCB_Y0, pcb_z))
-    asm.add(heatsink(HS_E['w'], HS_E['d'], HS_E['h'], 'Y', 14), name='load_heatsink', color=alu,
-            loc=L(WALL + HS_E['x0'], WALL + HS_E['y0'], FLOOR))
-    asm.add(fan(FAN60, 15).rotate((0, 0, 0), (1, 0, 0), 90), name='load_fan_60mm', color=dark,
-            loc=L(WALL + HS_E['x0'] + HS_E['w'] / 2 - FAN60 / 2, WALL + 15, FLOOR + 6))
-    # 0.1 R 50 W aluminium resistor bolted to the heatsink face above Q301 (standing, 50 x 28 x 15)
-    asm.add(box(50, 15, 28), name='series_R_0R1_50W', color=cq.Color(0.8, 0.7, 0.2),
-            loc=L(WALL + HS_E['x0'] + 25, WALL + HS_E['y0'] + HS_E['d'], FLOOR + 38))
-    asm.add(parts['E3_module_plate'], name='E3_module_plate', color=grey, loc=L(WALL + 1, WALL + 1, FLOOR + 4))
-    asm.add(box(*XL4016), name='XL4016_charger', color=blue, loc=L(WALL + 6, WALL + 6, FLOOR + 12))
-    asm.add(box(*XL4016), name='XL4016_12V', color=blue, loc=L(WALL + 6, WALL + 6, FLOOR + 42))
-    asm.add(box(*MP1584), name='MP1584_5V', color=blue, loc=L(E_OUT[0] - WALL - 26, WALL + 4, FLOOR))
+    # load cooler on its side: base (flat face) against the PCB edge at inner y = PCB_Y0
+    cz = FLOOR + CRADLE_FLOOR
+    asm.add(parts['E4_cooler_cradle'], name='E4_cooler_cradle', color=grey,
+            loc=L(WALL + HS_E['x0'] - CRADLE_WALL, WALL + HS_E['y0'], FLOOR))
+    cool = cpu_cooler().rotate((0, 0, 0), (1, 0, 0), -90)      # base now faces +Y
+    asm.add(cool, name='load_cooler_80x80x54', color=alu, loc=L(WALL + HS_E['x0'], WALL + HS_E['y0'], cz + COOLER[1]))
+    # 0.1 Ohm 50 W resistor on the cooler base, above the board (PCB side)
+    asm.add(box(*RH50), name='series_R_0R1_50W', color=cq.Color(0.8, 0.7, 0.2),
+            loc=L(WALL + Q301_X - RH50[0] / 2, WALL + PCB_Y0, FLOOR + 45))
+    # KSD9700 thermostat next to Q301
+    asm.add(cq.Workplane('XZ').circle(7.5).extrude(-7), name='KSD9700_60C', color=dark,
+            loc=L(WALL + Q301_X + 25, WALL + PCB_Y0, FLOOR + 32))
+    mx, my = WALL + MOD_PLATE_XY[0], WALL + MOD_PLATE_XY[1]
+    asm.add(parts['E3_module_plate'], name='E3_module_plate', color=grey, loc=L(mx, my, FLOOR + 4))
+    asm.add(box(*XL4016), name='XL4016_charger', color=blue, loc=L(mx + 5, my + 5, FLOOR + 12))
+    asm.add(box(*XL4016), name='XL4016_12V', color=blue, loc=L(mx + 5, my + 5, FLOOR + 42))
     # thermal unit to the right of the electronics box
     tx = E_OUT[0] + 15
     asm.add(parts['T1_thermal_base'], name='T1_thermal_base', color=grey, loc=L(tx, 0, 8))
     tz = 8
-    asm.add(fan(FAN60, 15), name='hot_side_fan_60mm', color=dark,
-            loc=L(tx + T_OUT[0] / 2 - 30, hy0 + HS_T[1] / 2 - 30, tz + FLOOR))
-    asm.add(heatsink(*HS_T, 'Z', 12), name='hot_side_heatsink', color=alu, loc=L(tx + hx0, hy0, tz + ledge_z))
+    asm.add(cpu_cooler(), name='hot_side_cooler_80x80x54', color=alu, loc=L(tx + hx0, hy0, tz + FLOOR + T_POST))
     for i in range(2):
         asm.add(box(*TEC), name='TEC1_12706_%d' % (i + 1), color=cq.Color(0.95, 0.95, 0.95),
-                loc=L(tx + hx0 + 8 + i * 44, hy0 + (HS_T[1] - TEC[1]) / 2, tz + ledge_z + HS_T[2]))
+                loc=L(tx + hx0 + i * 40, hy0 + (COOLER[1] - TEC[1]) / 2, tz + FLOOR + T_POST + COOLER[2]))
     plate_z = tz + T_BASE_H
     asm.add(cold_plate(), name='cold_plate_alu', color=alu, loc=L(tx + plate_xy[0], plate_xy[1], plate_z))
-    asm.add(box(*BTS7960), name='BTS7960', color=red, loc=L(tx + 35, 73, tz + FLOOR + 5))
     asm.add(parts['T2_pocket_body'], name='T2_pocket_body', color=cq.Color(0.9, 0.9, 0.9, 0.6), loc=L(tx, 0, plate_z))
     by0, body_d, h, cav_x0, cav_y0, cav_w, cav_d = geom
     asm.add(parts['T3_pocket_lid'], name='T3_pocket_lid', color=cq.Color(0.9, 0.9, 0.9, 0.5), loc=L(tx, 0, plate_z + h + 45))
     top = plate_z + PLATE[2]
-    asm.add(box(80, 30, PAD), name='thermal_pad', color=cq.Color(0.5, 0.6, 0.9), loc=L(tx + cav_x0 + 11, cav_y0 + cav_d / 2 - 15, top))
+    # 1 mm thermal pad, 60 x 10 mm, under the cell only (fits the open floor of both saddles)
+    d, l = CELLS['21700']
+    x_cell = tx + cav_x0 + 2 + 10 + 1.5
+    asm.add(box(60, 10, PAD), name='thermal_pad', color=cq.Color(0.5, 0.6, 0.9),
+            loc=L(x_cell + l / 2 - 30, cav_y0 + cav_d / 2 - 5, top))
     # 21700 shown in place; the 18650 saddle is exported but not placed
     d, l = CELLS['21700']
-    x_cell = tx + cav_x0 + 1 + 10 + 1.5
-    asm.add(parts['T4_contact_block_fixed'], name='T4_contact_block_fixed', color=dark, loc=L(tx + cav_x0 + 1, cav_y0 + 0.3, top))
+    asm.add(parts['T4_contact_block_fixed'], name='T4_contact_block_fixed', color=dark, loc=L(tx + cav_x0 + 2, cav_y0 + 0.3, top))
     asm.add(parts['T5_contact_block_slider'].rotate((5, 0, 0), (5, 0, 1), 180).translate((0, PLATE[1] + 2 - 0.6 + 0.6, 0)),
             name='T5_contact_block_slider', color=dark, loc=L(x_cell + l + 1.5, cav_y0 - 0.3, top))
     asm.add(parts['T7_saddle_21700'], name='T7_saddle_21700', color=cq.Color(0.95, 0.6, 0.1), loc=L(x_cell + l / 2 - 18, cav_y0 + 0.3, top))

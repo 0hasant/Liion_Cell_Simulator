@@ -5,7 +5,7 @@ want = {}
 fps = {}
 for k, r, pt in design.all_parts():
     if r.startswith('#'): continue
-    fps[r] = design.lib_fp(pt['fp'])
+    fps[r] = design.lib_fp(pt["fp"])
     for pin, n in pt['nets'].items():
         want[(r, pin)] = n
 net = parse(open(sys.argv[1] if len(sys.argv) > 1 else 'chk/net.net').read())[0]

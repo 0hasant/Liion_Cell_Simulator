@@ -1,28 +1,35 @@
 (kicad_sch
   (version 20230121)
   (generator eeschema)
-  (uuid 2ca2ea37-9df4-44c4-a178-bea9b66a1bc2)
+  (uuid d0bd28e9-33ae-4956-909b-7db88648ff33)
   (paper "A3")
   (title_block
     (title "Cell test bench")
-    (date "2026-10-13")
-    (rev "0.1 draft")
+    (date "2026-11-10")
+    (rev "0.4")
     (company "Solaris - cell test bench"))
   (lib_symbols)
-  (text "Cell test bench - schematic v0.2 (generated, footprints assigned). One 18650/21700 cell at a time; 0-10 A load, <=5 A charge, Peltier-controlled cell pocket."
+  (text "Cell test bench - schematic v0.4. One 18650/21700 cell at a time; 0-10 A load, <=5 A charge, Peltier-controlled cell pocket."
     (at 30 30 0)
     (effects
       (font
         (size 2 2))
       (justify left top))
-    (uuid 9332e4da-06e4-41ec-a5d0-826ae7c2f5f9))
-  (text "Inter-sheet connections use global labels. Power nets: GND, +12V, +5V, +3V3 (Blue Pill), VIN (30 V), +12V_SW (after thermostat)."
+    (uuid fa37e94d-56b4-4000-a4b0-c9b51f036352))
+  (text "Inter-sheet connections use global labels. Power nets: GND (signal), PGND (power return), +12V, +5V, +3V3 (Blue Pill), VIN (30 V), +12V_SW (after safety switch K4)."
     (at 30 38 0)
     (effects
       (font
         (size 1.5 1.5))
       (justify left top))
-    (uuid 0cf1a0ce-df10-4492-9e20-f2515aaa0668))
+    (uuid 9a35ce4c-18fb-4d68-8a59-29fd2a9ff92d))
+  (text "Single-sided board for in-house CNC milling. Explanation of every block: docs/SCHEMATIC_GUIDE.md."
+    (at 30 44 0)
+    (effects
+      (font
+        (size 1.5 1.5))
+      (justify left top))
+    (uuid ec7a67ca-5cb2-453e-99e9-9ad2e35b8af2))
   (sheet
     (at 40 60)
     (size 60 25)
@@ -32,7 +39,7 @@
       (type solid))
     (fill
       (color 0 0 0 0.0))
-    (uuid 0ec18e91-53bc-43e4-8318-a3c6bffafe30)
+    (uuid 0869e78b-6265-46c0-8aae-7f11aaa584eb)
     (property "Sheetname" "Power"
       (at 40 59.3 0)
       (effects
@@ -47,15 +54,15 @@
         (justify left top)))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33"
           (page "2")))))
-  (text "Power input and rails"
+  (text "Power input, rails and safety switch"
     (at 42 64 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 9f2231a6-0830-46ca-98bb-7090a163ebda))
+    (uuid f447b737-d628-41a7-afba-83c3ebc0f3c3))
   (sheet
     (at 130 60)
     (size 60 25)
@@ -65,7 +72,7 @@
       (type solid))
     (fill
       (color 0 0 0 0.0))
-    (uuid 02040192-ced7-4385-89e1-29754c8d0505)
+    (uuid d60f94b2-f662-40bd-8b3c-d6ef6709fc8f)
     (property "Sheetname" "Cell_Relays"
       (at 130 59.3 0)
       (effects
@@ -80,7 +87,7 @@
         (justify left top)))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33"
           (page "3")))))
   (text "Cell connection, shunt and relays K1/K2"
     (at 132 64 0)
@@ -88,7 +95,7 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 31c5f111-a2fd-433e-a573-37d85e95093e))
+    (uuid e02c5cc3-f4a0-484f-95e4-42450249516c))
   (sheet
     (at 220 60)
     (size 60 25)
@@ -98,7 +105,7 @@
       (type solid))
     (fill
       (color 0 0 0 0.0))
-    (uuid 5a9eb632-12d3-4250-9a08-604d11b4e9b5)
+    (uuid a600496c-b291-417b-8af7-71c8d87c18c5)
     (property "Sheetname" "Electronic_Load"
       (at 220 59.3 0)
       (effects
@@ -113,7 +120,7 @@
         (justify left top)))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33"
           (page "4")))))
   (text "Electronic load 0-10 A (linear, CC)"
     (at 222 64 0)
@@ -121,7 +128,7 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid e60b5a9d-77aa-4899-b9d0-c880346004e7))
+    (uuid 18d53cce-c7de-4029-854a-f04a76b918c1))
   (sheet
     (at 310 60)
     (size 60 25)
@@ -131,7 +138,7 @@
       (type solid))
     (fill
       (color 0 0 0 0.0))
-    (uuid 105b18fb-350d-4f8a-be5f-578a8e7c8519)
+    (uuid a5718d4f-6737-4dfe-a5cb-a432a3b75125)
     (property "Sheetname" "Charger"
       (at 310 59.3 0)
       (effects
@@ -146,15 +153,15 @@
         (justify left top)))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33"
           (page "5")))))
-  (text "Charger: XL4016 CC/CV module with DAC-set voltage"
+  (text "Charger: XL4016 CC/CV module, voltage and current set by the MCU"
     (at 312 64 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 1b4842ac-dea7-49a7-82b9-fecb87c36379))
+    (uuid b55f2b17-b907-4067-b867-71058b906e5c))
   (sheet
     (at 40 110)
     (size 60 25)
@@ -164,7 +171,7 @@
       (type solid))
     (fill
       (color 0 0 0 0.0))
-    (uuid 5bfb04d1-6928-4864-b5eb-bccb0cc714a9)
+    (uuid 6c18a1c2-b367-42af-92fe-f941305ccc0d)
     (property "Sheetname" "Measurement"
       (at 40 109.3 0)
       (effects
@@ -179,15 +186,15 @@
         (justify left top)))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33"
           (page "6")))))
-  (text "Measurement: 2 x ADS1115, NTCs, fast voltage"
+  (text "Measurement: ADS1115, NTCs, fast voltage"
     (at 42 114 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid c23bd514-5f61-4965-9549-1c15f4ddcde2))
+    (uuid 8f9382ab-7167-4b62-ac63-195836d1295e))
   (sheet
     (at 130 110)
     (size 60 25)
@@ -197,7 +204,7 @@
       (type solid))
     (fill
       (color 0 0 0 0.0))
-    (uuid 50329fb0-d821-4981-9e33-36d36ce6017f)
+    (uuid 61a0c0cd-03ce-4a68-8381-a84a4921a539)
     (property "Sheetname" "Protection"
       (at 130 109.3 0)
       (effects
@@ -212,15 +219,15 @@
         (justify left top)))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33"
           (page "7")))))
-  (text "Hardware protection (independent of firmware)"
+  (text "Hardware protection (independent of firmware), latched"
     (at 132 114 0)
     (effects
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 359a8036-286e-44eb-81ff-68c5106056e7))
+    (uuid 1c3b26ae-d141-417b-b9ed-bab7ae7f2568))
   (sheet
     (at 220 110)
     (size 60 25)
@@ -230,7 +237,7 @@
       (type solid))
     (fill
       (color 0 0 0 0.0))
-    (uuid 909b9f20-8afe-485a-a5d1-f095b4bf03f2)
+    (uuid 7c27e734-91d4-4bed-a3a6-b291abc020f0)
     (property "Sheetname" "Thermal"
       (at 220 109.3 0)
       (effects
@@ -245,7 +252,7 @@
         (justify left top)))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33"
           (page "8")))))
   (text "Peltier driver and fans"
     (at 222 114 0)
@@ -253,7 +260,7 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 63268dbb-5d66-4c17-b54d-72d1894a8643))
+    (uuid 65296bea-b30b-48b9-bc88-4e248d366aa7))
   (sheet
     (at 310 110)
     (size 60 25)
@@ -263,7 +270,7 @@
       (type solid))
     (fill
       (color 0 0 0 0.0))
-    (uuid bbe492b1-2611-4182-a179-24da0f792ab5)
+    (uuid 38f450ec-a7d7-42c8-89f5-93d215e23349)
     (property "Sheetname" "MCU"
       (at 310 109.3 0)
       (effects
@@ -278,7 +285,7 @@
         (justify left top)))
     (instances
       (project "cell_test_bench"
-        (path "/2ca2ea37-9df4-44c4-a178-bea9b66a1bc2"
+        (path "/d0bd28e9-33ae-4956-909b-7db88648ff33"
           (page "9")))))
   (text "Blue Pill (STM32F103C8) and interfaces"
     (at 312 114 0)
@@ -286,7 +293,7 @@
       (font
         (size 1.27 1.27))
       (justify left top))
-    (uuid 1bddd3b9-3879-4d5c-9a4c-2b0fe594ebec))
+    (uuid 02727662-ba2f-4456-bca7-4080b85c59ea))
   (sheet_instances
     (path "/"
       (page "1"))))

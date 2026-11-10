@@ -1,0 +1,5 @@
+DRC with CNC rules (cell_test_bench.kicad_pcb)
+DRC errors (excluding unconnected items): none
+KiCad unconnected items: 82 (one per wire jumper: 82 wires)
+conncheck.py, nets incomplete after counting the wire jumpers: none
+conncheck.py, copper shorts between nets: none
